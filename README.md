@@ -17,12 +17,12 @@ This package provides various tools for face recogntion, i.e., classification, a
 List of benchmarks
 ---------
 - **PCA** (Principal component analysis)
-    - M. Turk and A. Pentland, "Eigenfaces for recognition," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
+    - M. Turk and A. Pentland, "[Eigenfaces for recognition](https://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf)," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
     - See [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
 - **ICA** (Independent component analysis)
     - See [wikipedia](https://en.wikipedia.org/wiki/Independent_component_analysis).
 - **LDA** (Linear discriminant analysis)
-    - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces versus Fisherfaces," Pattern Anal. Mach. Intell., vol.19, no. 7, pp.771-720, 1997.
+    - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
     - See [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
 - **LRC** (Linear regression classification)
     - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
