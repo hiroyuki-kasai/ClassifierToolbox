@@ -58,13 +58,14 @@ run_me_first;
 
 Second to do: download datasets
 ----------------------------
-Run `download` for path configurations. 
+Run `download` for downloading datasets.
 ```Matlab
-%% First run the setup script
+%% Run the downloading script for downloading datasets
 download; 
 ```
 
 - If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
+- If you still fail, please acccess [this](http://www.kasailab.com/public/github/FaceRecognitionToolbox/), and download directly datasets to your computer. 
 
 
 Usage example: ORL face dateset demo: 3 steps!
