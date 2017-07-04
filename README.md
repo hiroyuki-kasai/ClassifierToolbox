@@ -87,11 +87,11 @@ fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
 
 <br />
 
-Let take a closer look at the code above bit by bit. The procedure has only **4 steps**!
+Let take a closer look at the code above bit by bit. The procedure has only **3 steps**!
 
 **Step 1: load data**
 
-First, we load datasets including train set and test set. This case uses a covariance dataset that is originally generated from [ORL face dataset]().
+First, we load datasets including train set and test set. This case uses a covariance dataset that is originally generated from [ORL face dataset](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html).
 ```Matlab    
 load('./dataset/ORL_Face_img_cov.mat');
 ```
@@ -106,7 +106,7 @@ grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
 % RCM4 with eigenvalue-based distance
 rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
 ```
-The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by 5-kNN classifier. 
+The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by [5-NN classifier](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm). 
 The second cases peforms the standard region covariance matrix (RCM) algorithm (type 2) with the same setting as before. They return the final accuracy.
 
 **Step 3: Show recognition accuracy**
