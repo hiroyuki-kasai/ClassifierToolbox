@@ -23,12 +23,17 @@ List of benchmarks
     - See [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
 - **LRC** (Linear regression classification)
     - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
+- **LDRC** (Linear discriminant regression classificatoin)
+    - S.-M. Huang and J.-F. Yang, "[Linear discriminant regression classification for face recognition](http://ieeexplore.ieee.org/document/6373697/)," IEEE Signal Processing Letters, vol.20, no.1, pp.91-94, 2013.
 - **LCDRC** (Linear collaborative discriminant regression classificatoin)
     - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
     - Lei Zhanga, Meng Yanga, and Xiangchu Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
-- **GRCM + kNN ** (Gabor-wavelet-based region covariance matrix algorithm)
+- **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
     - Yanwei Pang, Yuan Yuan, and Xuelong Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
+- **LSR** (Least squares regression)
+- **DERLR** (Discriminative elastic-net regularized linear regression)
+    - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression?h, IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - **NMF** (Non-negative matrix factorization)
     - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
 
@@ -48,7 +53,7 @@ Folders and files
 </pre>
    
 
-First to do
+First to do: configure path
 ----------------------------
 Run `run_me_first` for path configurations. 
 ```Matlab
@@ -65,7 +70,6 @@ download;
 ```
 
 - If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
-- If you still fail, please acccess [this](http://www.kasailab.com/public/github/FaceRecognitionToolbox/), and download directly datasets to your computer. 
 
 
 Usage example: ORL face dateset demo: 3 steps!
@@ -107,7 +111,7 @@ load('./dataset/ORL_Face_img_cov.mat');
 
 **Step 2: Perform solver**
 
-Now, you can perform optimization solvers, i.e., RCM-based [kNN classifier, calling](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) `rcm_knn_classifier()` function with appropriate paramters. 
+Now, you can perform optimization solvers, i.e., RCM-based [kNN classifier](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm), calling `rcm_knn_classifier()` function with appropriate paramters. 
 ```Matlab
 % GRCM2 with eigenvalue-based distance
 grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
