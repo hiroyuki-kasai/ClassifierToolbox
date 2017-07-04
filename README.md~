@@ -59,7 +59,7 @@ run_me_first;
 
 ```
 
-Usage example: ORL face dateset demo: 3 steps!
+Usage example: ORL face dateset demo  4 steps!
 ----------------------------
 Now, just execute `demo` for demonstration of this package.
 ```Matlab
@@ -74,19 +74,19 @@ The "**demo.m**" file contains below.
 %% load data
 load('./dataset/ORL_Face_img_cov.mat');
 
+
 %% perform RCM k-NN classifier with 
 % GRCM2 with eigenvalue-based distance
 grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet,'GRCM', '2', 'EV', 5);
 % RCM4 with eigenvalue-based distance
 rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
 
-%% show recognition accuracy
+fprintf('\n');
 fprintf('# GRCM2 Accuracy = %5.2f\n', grcm_accuracy);
 fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
 ```
 
 <br />
-
 Let take a closer look at the code above bit by bit. The procedure has only **4 steps**!
 
 **Step 1: load data**
@@ -107,14 +107,16 @@ grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
 rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
 ```
 The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by 5-kNN classifier. 
-The second cases peforms the standard region covariance matrix (RCM) algorithm (type 2) with the same setting as before. They return the final accuracy.
+The second cases peforms the standard region covariance matrix (RCM) algorithm (type 2) with the same setting as before. 
 
-**Step 3: Show recognition accuracy**
+They return the final solutions of `w` and the statistics information that include the histories of epoch numbers, cost values, norms of gradient, the number of gradient evaluations and so on.
 
-Finally, the final recognition accuracis are shown.
+**Step 3: Show acc**
+
+Finally, `display_graph()` provides output results of decreasing behavior of the cost values in terms of the number of gradient evaluations. 
+Note that each algorithm needs different number of evaluations of samples in each epoch. Therefore, it is common to use this number to evaluate stochastic optimization algorithms instead of the number of iterations.
 ```Matlab
-fprintf('# GRCM2 Accuracy = %5.2f\n', grcm_accuracy);
-fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
+display_graph('grad_calc_count','cost', {'SGD', 'SVRG'}, {w_sgd, w_svrg}, {info_sgd, info_svrg});
 ```
 
 That's it!
