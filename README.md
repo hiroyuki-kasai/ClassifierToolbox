@@ -64,7 +64,7 @@ Run `download` for path configurations.
 download; 
 ```
 
-    - If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
+- If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
 
 
 Usage example: ORL face dateset demo: 3 steps!
