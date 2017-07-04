@@ -39,6 +39,8 @@ List of benchmarks
 - **LSR** (Least squares regression)
 - **DERLR** (Discriminative elastic-net regularized linear regression)
     - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression?h, IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+- **SRC** (Sparse representation classifcation)
+    - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210?227, 2009.
 - **NMF** (Non-negative matrix factorization)
     - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
 
