@@ -46,7 +46,7 @@ Folders and files
 |covariance_generator/          - Tools for generating covariance descriptors.
 |3rd_parth/                     - 3rd party tools.
 </pre>
-                                 
+   
 
 First to do
 ----------------------------
@@ -54,10 +54,18 @@ Run `run_me_first` for path configurations.
 ```Matlab
 %% First run the setup script
 run_me_first; 
+```                              
 
-
-
+Second to do: download datasets
+----------------------------
+Run `download` for path configurations. 
+```Matlab
+%% First run the setup script
+download; 
 ```
+
+    - If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
+
 
 Usage example: ORL face dateset demo: 3 steps!
 ----------------------------
@@ -89,7 +97,7 @@ fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
 
 Let take a closer look at the code above bit by bit. The procedure has only **3 steps**!
 
-**Step 1: load data**
+**Step 1: Load data**
 
 First, we load datasets including train set and test set. This case uses a covariance dataset that is originally generated from [ORL face dataset](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html).
 ```Matlab    
@@ -98,7 +106,7 @@ load('./dataset/ORL_Face_img_cov.mat');
 
 **Step 2: Perform solver**
 
-Now, you can perform optimization solvers, i.e., RCM-based kNN classifier, calling `rcm_knn_classifier()` function with appropriate paramters. 
+Now, you can perform optimization solvers, i.e., RCM-based [kNN classifier, calling](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) `rcm_knn_classifier()` function with appropriate paramters. 
 ```Matlab
 % GRCM2 with eigenvalue-based distance
 grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
@@ -106,7 +114,7 @@ grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
 % RCM4 with eigenvalue-based distance
 rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
 ```
-The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by [5-NN classifier](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm). 
+The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by 5-NN classifier. 
 The second cases peforms the standard region covariance matrix (RCM) algorithm (type 2) with the same setting as before. They return the final accuracy.
 
 **Step 3: Show recognition accuracy**
