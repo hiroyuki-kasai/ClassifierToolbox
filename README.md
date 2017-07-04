@@ -13,13 +13,16 @@ Introduction
 This package provides various tools for face recogntion, i.e., classification, applicaiton. 
 
 
+
 List of benchmarks
 ---------
 - **PCA** (Principal component analysis)
+    - M. Turk and A. Pentland, "Eigenfaces for recognition," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
     - See [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
 - **ICA** (Independent component analysis)
     - See [wikipedia](https://en.wikipedia.org/wiki/Independent_component_analysis).
 - **LDA** (Linear discriminant analysis)
+    - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces versus Fisherfaces," Pattern Anal. Mach. Intell., vol.19, no. 7, pp.771-720, 1997.
     - See [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
 - **LRC** (Linear regression classification)
     - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
@@ -29,6 +32,8 @@ List of benchmarks
     - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
     - Lei Zhanga, Meng Yanga, and Xiangchu Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
+- **RCM+kNN** (Region covariance matrix algorithm)
+    - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
 - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
     - Yanwei Pang, Yuan Yuan, and Xuelong Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
 - **LSR** (Least squares regression)
