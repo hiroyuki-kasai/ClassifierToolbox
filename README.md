@@ -37,6 +37,8 @@ List of benchmarks
 - **NMF** (Non-negative matrix factorization)
     - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
 
+<br />
+
 Folders and files
 ---------
 
@@ -53,6 +55,8 @@ Folders and files
 </pre>
    
 
+<br />
+
 First to do: configure path
 ----------------------------
 Run `run_me_first` for path configurations. 
@@ -60,6 +64,8 @@ Run `run_me_first` for path configurations.
 %% First run the setup script
 run_me_first; 
 ```                              
+
+<br />
 
 Second to do: download datasets
 ----------------------------
@@ -71,6 +77,7 @@ download;
 
 - If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
 
+<br />
 
 Usage example: ORL face dateset demo: 3 steps!
 ----------------------------
@@ -135,10 +142,11 @@ That's it!
 <br />
 
 
-
 Problems or questions
 ---------------------
 If you have any problems or questions, please contact the author: [Hiroyuki Kasai](http://kasai.kasailab.com/) (email: kasai **at** is **dot** uec **dot** ac **dot** jp)
+
+<br />
 
 Release Notes
 --------------
