@@ -32,17 +32,18 @@ List of benchmarks
     - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
     - Lei Zhanga, Meng Yanga, and Xiangchu Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
+- **LSR** (Least squares regression)
+- **DERLR** (Discriminative elastic-net regularized linear regression)
+    - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+- **SRC** (Sparse representation classifcation)
+    - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
+- **NMF** (Non-negative matrix factorization)
+    - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
 - **RCM+kNN** (Region covariance matrix algorithm)
     - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
 - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
     - Yanwei Pang, Yuan Yuan, and Xuelong Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
-- **LSR** (Least squares regression)
-- **DERLR** (Discriminative elastic-net regularized linear regression)
-    - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression?h, IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
-- **SRC** (Sparse representation classifcation)
-    - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210?227, 2009.
-- **NMF** (Non-negative matrix factorization)
-    - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
+
 
 <br />
 
