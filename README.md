@@ -2,9 +2,11 @@
 
 ----------
 
-Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/) and Kohei Yoshikawa
+Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
-Last page update: July 01, 2017
+Collaborator: Kohei Yoshikawa
+
+Last page update: July 05, 2017
 
 Latest library version: 1.0.0 (see Release notes for more info)
 
@@ -14,7 +16,7 @@ This package provides various tools for face recogntion, i.e., classification, a
 
 
 
-List of benchmarks
+List of algorithms
 ---------
 - basis
     - **PCA** (Principal component analysis)
@@ -33,11 +35,11 @@ List of benchmarks
     - **LCDRC** (Linear collaborative discriminant regression classificatoin)
         - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
-    - L. Zhanga, M. Yanga, and X. Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
+    - L. Zhanga, M. Yanga, and X. Feng, "[Sparse representation or collaborative representation: which helps face recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
 - LSR variant
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
-        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "Discriminative elastic-net regularized linear regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - Matrix factorization based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
@@ -45,12 +47,12 @@ List of benchmarks
     - **RCM+kNN** (Region covariance matrix algorithm)
         - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
     - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
-        - Y. Pang, Y. Yuan, and X. Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
+        - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
 - SRC variant
     - **SRC** (Sparse representation classifcation)
         - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
 - Dictionary learning based
-    - **KSVD**
+    - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
     - **LC-KSVD** (Label Consistent K-SVD)
         - Z. Jiang, Z. Lin, L. S. Davis, "[Learning a discriminative dictionary for sparse coding via label consistent K-SVD](http://ieeexplore.ieee.org/abstract/document/5995354/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2011), 2011.
