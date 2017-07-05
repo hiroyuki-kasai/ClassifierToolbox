@@ -16,33 +16,45 @@ This package provides various tools for face recogntion, i.e., classification, a
 
 List of benchmarks
 ---------
-- **PCA** (Principal component analysis)
-    - M. Turk and A. Pentland, "[Eigenfaces for recognition](https://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf)," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
-    - See also [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
-- **ICA** (Independent component analysis)
-    - See [wikipedia](https://en.wikipedia.org/wiki/Independent_component_analysis).
-- **LDA** (Linear discriminant analysis)
-    - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
-    - See also [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
-- **LRC** (Linear regression classification)
-    - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
-- **LDRC** (Linear discriminant regression classificatoin)
-    - S.-M. Huang and J.-F. Yang, "[Linear discriminant regression classification for face recognition](http://ieeexplore.ieee.org/document/6373697/)," IEEE Signal Processing Letters, vol.20, no.1, pp.91-94, 2013.
-- **LCDRC** (Linear collaborative discriminant regression classificatoin)
-    - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
+- basis
+    - **PCA** (Principal component analysis)
+        - M. Turk and A. Pentland, "[Eigenfaces for recognition](https://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf)," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
+        - See also [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
+    - **ICA** (Independent component analysis)
+        - See [wikipedia](https://en.wikipedia.org/wiki/Independent_component_analysis).
+    - **LDA** (Linear discriminant analysis)
+        - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
+        - See also [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
+- LRC variant
+    - **LRC** (Linear regression classification)
+        - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
+    - **LDRC** (Linear discriminant regression classificatoin)
+        - S.-M. Huang and J.-F. Yang, "[Linear discriminant regression classification for face recognition](http://ieeexplore.ieee.org/document/6373697/)," IEEE Signal Processing Letters, vol.20, no.1, pp.91-94, 2013.
+    - **LCDRC** (Linear collaborative discriminant regression classificatoin)
+        - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
-    - Lei Zhanga, Meng Yanga, and Xiangchu Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
-- **LSR** (Least squares regression)
-- **DERLR** (Discriminative elastic-net regularized linear regression)
-    - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
-- **SRC** (Sparse representation classifcation)
-    - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
-- **NMF** (Non-negative matrix factorization)
-    - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
-- **RCM+kNN** (Region covariance matrix algorithm)
-    - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
-- **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
-    - Yanwei Pang, Yuan Yuan, and Xuelong Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
+    - L. Zhanga, M. Yanga, and X. Feng, "[Sparse Representation or Collaborative Representation: Which Helps Face Recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
+- LSR variant
+    - **LSR** (Least squares regression)
+    - **DERLR** (Discriminative elastic-net regularized linear regression)
+        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, ?gDiscriminative Elastic-Net Regularized Linear Regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+- Matrix factorization based
+    - **NMF** (Non-negative matrix factorization)
+        - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
+- RCM based
+    - **RCM+kNN** (Region covariance matrix algorithm)
+        - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
+    - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
+        - Y. Pang, Y. Yuan, and X. Li, "[Gabor-Based Region Covariance Matrices for Face Recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
+- SRC variant
+    - **SRC** (Sparse representation classifcation)
+        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
+- Dictionary learning based
+    - **KSVD**
+        - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
+    - **LC-KSVD** (Label Consistent K-SVD)
+        - Z. Jiang, Z. Lin, L. S. Davis, "[Learning a discriminative dictionary for sparse coding via label consistent K-SVD](http://ieeexplore.ieee.org/abstract/document/5995354/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2011), 2011.
+        - Z. Jiang, Z. Lin, L. S. Davis, "[Label consistent K-SVD: learning A discriminative dictionary for recognition](http://ieeexplore.ieee.org/document/6516503/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.35, no.11, pp.2651-2664, 2013.
 
 
 <br />
