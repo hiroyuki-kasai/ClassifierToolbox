@@ -168,11 +168,11 @@ License
 - This toobox is **free**, **non-commercial** and **open** source.
 - The code provided in this toobox should only be used for **academic/research purposes**.
 - Third party files are included.
-    - [OMPBox](http://www.cs.technion.ac.il/~ronrubin/Software/ompbox10.zip) is used for omp.
+    - [OMPBox](http://www.cs.technion.ac.il/~ronrubin/Software/ompbox10.zip) is used for [OMP](https://en.wikipedia.org/wiki/Matching_pursuit) (orthogonal matching pursuit) algorithm.
     - [KSVDBox](http://www.cs.technion.ac.il/~ronrubin/Software/ksvdbox13.zip) is used for K-SVD algorithm.
     - [LC-KSVD](https://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html).
     - DERLR.
-    - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is fro NMF.
+    - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is fro [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
 <br />
 
 
