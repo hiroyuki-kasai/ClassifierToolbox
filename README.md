@@ -6,9 +6,9 @@ Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
 Collaborator: Kohei Yoshikawa
 
-Last page update: July 05, 2017
+Last page update: July 06, 2017
 
-Latest library version: 1.0.0 (see Release notes for more info)
+Latest library version: 1.0.1 (see Release notes for more info)
 
 Introduction
 ----------
@@ -91,11 +91,11 @@ run_me_first;
 
 <br />
 
-Second to do: download datasets
+Second to do: download datasets and external libraries
 ----------------------------
-Run `download` for downloading datasets.
+Run `download` for downloading datasets and external libraries.
 ```Matlab
-%% Run the downloading script for downloading datasets
+%% Run the downloading script
 download; 
 ```
 
@@ -174,6 +174,7 @@ License
     - [KSVDBox](http://www.cs.technion.ac.il/~ronrubin/Software/ksvdbox13.zip) is used for K-SVD algorithm.
     - [LC-KSVD](https://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html).
     - DERLR.
+    - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
     - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is fro [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
 <br />
 
@@ -186,6 +187,8 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
+* Version 1.0.1 (July 06, 2017)
+    - Add and modify many items.
 * Version 1.0.0 (July 01, 2017)
     - Initial version.
 
