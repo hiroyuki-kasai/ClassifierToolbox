@@ -6,9 +6,8 @@ clc;
 %% load dataset
 %load('../dataset/ORL_Face_img.mat');
 %load('../dataset/Brodatz_texture_img_small_set.mat');
-%load('../dataset/Cropped_YaleB_small_img_24x20.mat'); % does not work. Why???
-load('../dataset/AR_Face_img_27x20_from_LKDL.mat'); 
-%load('../dataset/AR_Face_img_60x43_from_CRC.mat'); 
+load('../dataset/AR_Face_img_27x20.mat'); 
+%load('../dataset/AR_Face_img_60x43.mat'); 
 
 
 %% reduce dataset for efficient test if necessary
