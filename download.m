@@ -10,7 +10,7 @@ local_folder_name = 'dataset_new';
 % remote url, path, and filelist
 site_url = 'https://dl.dropboxusercontent.com/';
 site_path = 'u/869853/Github/FaceRecognitionToolbox/dataset/';
-filename_array = {'ORL_Face_img.mat', 'ORL_Face_img_cov.mat'};
+filename_array = {'ORL_Face_img.mat', 'ORL_Face_img_cov.mat', 'AR_Face_img_27x20.mat', 'AR_Face_img_60x43.mat'};
 file_num = length(filename_array);
 
 % download files

@@ -2,21 +2,18 @@
 
 addpath(pwd);
 
+cd lib/;
+addpath(genpath(pwd));
+cd ..;
+
 cd auxiliary/;
 addpath(genpath(pwd));
 cd ..;
 
-cd covariance_generator/;
-addpath(genpath(pwd));
-cd ..;
-
-cd 3rd_Party;
+cd algorithm;
 addpath(genpath(pwd));
 cd ../;
 
-cd 3rd_Party_other;
-addpath(genpath(pwd));
-cd ../;
 
 
 

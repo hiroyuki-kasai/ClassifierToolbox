@@ -18,7 +18,7 @@ This package provides various tools for face recogntion, i.e., classification, a
 
 List of algorithms
 ---------
-- basis
+- Basis
     - **PCA** (Principal component analysis)
         - M. Turk and A. Pentland, "[Eigenfaces for recognition](https://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf)," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
         - See also [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
@@ -27,8 +27,8 @@ List of algorithms
     - **LDA** (Linear discriminant analysis)
         - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
         - See also [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
-- LRC variant
-    - **LRC** (Linear regression classification)
+- **LRC** (Linear regression classification) variant
+    - **LRC**
         - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
     - **LDRC** (Linear discriminant regression classificatoin)
         - S.-M. Huang and J.-F. Yang, "[Linear discriminant regression classification for face recognition](http://ieeexplore.ieee.org/document/6373697/)," IEEE Signal Processing Letters, vol.20, no.1, pp.91-94, 2013.
@@ -43,14 +43,16 @@ List of algorithms
 - Matrix factorization based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
-- RCM based
+- **RCM** based
     - **RCM+kNN** (Region covariance matrix algorithm)
         - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
     - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
         - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
-- SRC variant
-    - **SRC** (Sparse representation classifcation)
+- **SRC** (Sparse representation classifcation) variant
+    - **SRC** 
         - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
+    - **ESRC** (Extended Sparse representation classifcation)
+        - W. Deng, J. Hu, and J. Guo, "Extended SRC: Undersampled face recognition via intraclass variant dictionary," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
 - Dictionary learning based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
