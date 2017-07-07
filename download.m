@@ -57,7 +57,7 @@ end
 
 cd lib/;
 
-lib_num = 2;
+lib_num = 3;
 
 lib_cell = cell(1,lib_num); 
 
@@ -69,12 +69,9 @@ lib_struct.name = 'SparseGDLibrary-master';
 lib_struct.url = 'https://github.com/hiroyuki-kasai/SparseGDLibrary/archive/master.zip';
 lib_cell{2} = lib_struct;
 
-
-
-% url_array = { ...
-%         'https://github.com/hiroyuki-kasai/NMFLibrary/archive/master.zip', ...
-%         'https://github.com/hiroyuki-kasai/SparseGDLibrary/archive/master.zip'};
-% dataset_num = length(url_array);
+lib_struct.name = 'DSK-master';
+lib_struct.url = 'https://github.com/seuzjj/DSK/archive/master.zip';
+lib_cell{3} = lib_struct;
 
 
 % download files
