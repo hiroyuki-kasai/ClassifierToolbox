@@ -18,7 +18,7 @@ This package provides various tools for face recogntion, i.e., classification, a
 
 List of algorithms
 ---------
-- Basis
+- **Basis**
     - **PCA** (Principal component analysis)
         - M. Turk and A. Pentland, "[Eigenfaces for recognition](https://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf)," J. Cognitive Neurosci," vol.3, no.1, pp.71-86, 1991.
         - See also [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis).
@@ -43,11 +43,11 @@ List of algorithms
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
         - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "Discriminative elastic-net regularized linear regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
-- Low-rank factorization based
+- **Low-rank matrix factorization** based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
     - **Robust PCA classifier**
-        - Clasifier uses SRC;
+        - Clasifier uses SRC.
         - Use [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary).
 - **RCM** based
     - **RCM+kNN** (Region covariance matrix algorithm)
@@ -59,7 +59,7 @@ List of algorithms
         - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
     - **ESRC** (Extended Sparse representation classifcation)
         - W. Deng, J. Hu, and J. Guo, "Extended SRC: Undersampled face recognition via intraclass variant dictionary," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
-- Dictionary learning based
+- **Dictionary learning** based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
     - **LC-KSVD** (Label Consistent K-SVD)
