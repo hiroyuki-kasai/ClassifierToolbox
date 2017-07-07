@@ -39,14 +39,15 @@ List of algorithms
         - X. Qu, S. Kim, R. Cui and H. J. Kim, "[Linear collaborative discriminant regression classification for face recognition](http://www.sciencedirect.com/science/article/pii/S1047320315001297)," J. Visual Communication Image Represetation, vol.31, pp. 312-319, 2015.
 - **CRC** (Collaborative representation based classification)
     - L. Zhanga, M. Yanga, and X. Feng, "[Sparse representation or collaborative representation: which helps face recognition?](http://dl.acm.org/citation.cfm?id=2356341)," Proceedings of the 2011 International Conference on Computer Vision (ICCV'11), pp. 471-478, 2011.
-- LSR variant
+- **LSR** variant
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
         - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "Discriminative elastic-net regularized linear regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - **Low-rank matrix factorization** based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
-    - **Robust PCA classifier**
+    - **[Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier**
+        - E. Candes, X. Li, Y. Ma, and J. Wright, "obust Principal Component Analysis?," Journal of the ACM, vol.58, no.3, 2011.
         - Clasifier uses SRC.
         - Use [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary).
 - **RCM** based
