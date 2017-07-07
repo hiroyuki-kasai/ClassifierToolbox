@@ -6,7 +6,7 @@ Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
 Collaborator: Kohei Yoshikawa
 
-Last page update: July 06, 2017
+Last page update: July 07, 2017
 
 Latest library version: 1.0.1 (see Release notes for more info)
 
@@ -27,8 +27,11 @@ List of algorithms
     - **LDA** (Linear discriminant analysis)
         - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
         - See also [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
-- **LRC** (Linear regression classification) variant
-    - **LRC**
+    - **SVM** (Support vector machine)
+        - See [wikipedia](https://en.wikipedia.org/wiki/Support_vector_machine)
+        - Use Matlab built-in library (svmfitcsvm and predict).
+- **LRC** variant
+    - **LRC** (Linear regression classification)
         - I. Nassem, M. Bennamoun, "[Linear regression for face recognition](http://ieeexplore.ieee.org/document/5506092/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.32, no.11, 2010.
     - **LDRC** (Linear discriminant regression classificatoin)
         - S.-M. Huang and J.-F. Yang, "[Linear discriminant regression classification for face recognition](http://ieeexplore.ieee.org/document/6373697/)," IEEE Signal Processing Letters, vol.20, no.1, pp.91-94, 2013.
@@ -48,8 +51,8 @@ List of algorithms
         - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
     - **GRCM+kNN** (Gabor-wavelet-based region covariance matrix algorithm)
         - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
-- **SRC** (Sparse representation classifcation) variant
-    - **SRC** 
+- **SRC** variant
+    - **SRC** (Sparse representation classifcation) 
         - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
     - **ESRC** (Extended Sparse representation classifcation)
         - W. Deng, J. Hu, and J. Guo, "Extended SRC: Undersampled face recognition via intraclass variant dictionary," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
@@ -187,7 +190,7 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
-* Version 1.0.1 (July 06, 2017)
+* Version 1.0.7 (July 06, 2017)
     - Add and modify many items.
 * Version 1.0.0 (July 01, 2017)
     - Initial version.

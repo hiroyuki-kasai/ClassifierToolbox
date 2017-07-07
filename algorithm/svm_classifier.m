@@ -1,5 +1,5 @@
-function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambda, options)
-% Sparse representation classification (SRC) algorithm
+function accuracy = svm_classifier(TrainSet, TestSet, train_num, test_num, class_num, options)
+% SVM classification (SRC) algorithm
 %
 % Inputs:
 %       TrainSet            train sets of size dxn, where d is dimension and n is number of sets 
@@ -11,10 +11,9 @@ function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambd
 %       accuracy            classification accurary
 %
 % References:
-
 %
 %
-% Created by H.Kasai on July 06, 2017
+% Created by H.Kasai on July 07, 2017
 
 
     % extract options
@@ -46,40 +45,42 @@ function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambd
         TestSet.X   =  disc_set' * TestSet.X;
     end
 
-    % normalize data to l2-norm
-    [TrainSet.X, ~] = data_normalization(TrainSet.X, TrainSet.y, 'std');   
-    [TestSet.X, ~] = data_normalization(TestSet.X, TestSet.y, 'std');  
+    % generate SVM models for each class
+	models = cell(1, class_num);
+	for i = 1 : class_num
+        % create label data 
+        label = zeros(train_num, 1) - 1;    % initialize as '-11' for all classes
+        index = find(TrainSet.y == i);
+        label(index) = 1;                   % set '1' for this class (i)
+		
+		% generate svm models
+        models{i} = fitcsvm(TrainSet.X', label, 'KernelFunction','RBF', 'KernelScale','auto');
+    end
     
-    % prepare class array
-    classes = unique(TrainSet.y);
     
     % prepare predicted label array
     identity = zeros(1, test_num);
     
     for i = 1 : test_num
 
-        y = TestSet.X(:, i);
-
-        % calculate sparse code
-        xp = l1_ls(TrainSet.X, y, lambda, 1e-3, 1); 
-
-        % prepare residual array
-        residuals = zeros(1, class_num);
+        % prepare prediction result array
+		prediction = zeros(1, class_num);
         
-        % calculate residual for each class
-        for j = 1 : class_num
-            idx = find(TrainSet.y == classes(j));
-            residuals(j) = norm(y-TrainSet.X(:,idx)*xp(idx))/sum(xp(idx).*xp(idx));
-            %residuals(j) = norm(y - TrainSet.X(:,idx)*xp(idx));
+		for j = 1 : class_num
+            % do SVM precition (classification)
+            [prediction(j), ~] = predict(models{j}, TestSet.X(:,i)');
         end
-
-        % calculate the predicted label with minimum residual
-        [~, label] = min(residuals); 
+        
+        % calculate the predicted label
+		label = find(prediction == 1);
+        if isempty(label)
+            label = -1;
+        end
         identity(i) = label;
         
         if verbose
             correct = (label == TestSet.y(1, i));
-            fprintf('# SRC: test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);
+            fprintf('# SVM: test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);
         end           
 
     end
@@ -88,6 +89,3 @@ function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambd
     correct_num = sum(identity == TestSet.y);
     accuracy = correct_num/test_num;
 end
-
-
-

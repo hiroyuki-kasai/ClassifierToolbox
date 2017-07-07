@@ -7,4 +7,6 @@ dataset/
 lib_other/
 auxiliary_org/
 run_me_first_for_us.m
+lib/NMFLibrary-master
+lib/SparseGDLibrary-master
 !.gitignore
