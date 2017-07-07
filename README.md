@@ -43,9 +43,12 @@ List of algorithms
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
         - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "Discriminative elastic-net regularized linear regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
-- Matrix factorization based
+- Low-rank factorization based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
+    - **Robust PCA classifier**
+        - Clasifier uses SRC;
+        - Use [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary).
 - **RCM** based
     - **RCM+kNN** (Region covariance matrix algorithm)
         - O. Tuzel, F. Porikli, and P. Meer "[Region covariance: a fast descriptor for detection and classification](https://link.springer.com/chapter/10.1007/11744047_45)," European Conference on Computer Vision (ECCV2006), pp.589-600, 2006.
@@ -178,7 +181,8 @@ License
     - [LC-KSVD](https://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html).
     - DERLR.
     - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
-    - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is fro [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
+    - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is for [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
+    - [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary) is for [Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier.
 <br />
 
 
