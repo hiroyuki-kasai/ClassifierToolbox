@@ -8,6 +8,7 @@ clc;
 
 
 
+
 %% load data
 if 1
     load('../dataset/ORL_Face_img_cov.mat');
