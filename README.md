@@ -47,7 +47,7 @@ List of algorithms
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
     - **[Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier**
-        - E. Candes, X. Li, Y. Ma, and J. Wright, "obust Principal Component Analysis?," Journal of the ACM, vol.58, no.3, 2011.
+        - E. Candes, X. Li, Y. Ma, and J. Wright, "[Robust Principal Component Analysis?](http://perception.csl.illinois.edu/matrix-rank/Files/RPCA_JACM.pdf)," Journal of the ACM, vol.58, no.3, 2011.
         - Clasifier uses SRC.
         - Use [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary).
 - **RCM** based
