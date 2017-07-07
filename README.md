@@ -25,7 +25,7 @@ List of algorithms
     - **ICA** (Independent component analysis)
         - See [wikipedia](https://en.wikipedia.org/wiki/Independent_component_analysis).
     - **LDA** (Linear discriminant analysis)
-        - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "Eigenfaces vs. Fisherfaces: recognition using class specific linear projection," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
+        - P. N. Belhumeur, J. P. Hespanha, and D. I. Kriegman, "[Eigenfaces vs. Fisherfaces: recognition using class specific linear projection](http://ieeexplore.ieee.org/document/598228/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.19, no.7, pp.711-720, 1997.
         - See also [wikipedia](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
     - **SVM** (Support vector machine)
         - See [wikipedia](https://en.wikipedia.org/wiki/Support_vector_machine)
@@ -42,7 +42,7 @@ List of algorithms
 - **LSR** variant
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
-        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "Discriminative elastic-net regularized linear regression," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "[Discriminative elastic-net regularized linear regression[(http://ieeexplore.ieee.org/document/7814255/)," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - **Low-rank matrix factorization** based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
@@ -57,9 +57,9 @@ List of algorithms
         - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
 - **SRC** variant
     - **SRC** (Sparse representation classifcation) 
-        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "Robust face recognition via sparse representation," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
+        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
     - **ESRC** (Extended Sparse representation classifcation)
-        - W. Deng, J. Hu, and J. Guo, "Extended SRC: Undersampled face recognition via intraclass variant dictionary," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
+        - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
 - **Dictionary learning** based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
