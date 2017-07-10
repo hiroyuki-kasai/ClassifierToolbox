@@ -12,7 +12,7 @@ Latest library version: 1.0.3 (see Release notes for more info)
 
 Introduction
 ----------
-This package provides various tools for recogntions, i.e., image classification, face recogntion, and related applicaiton. 
+This package provides various tools for classification, i.e., image classification, face recogntion, and related applicaiton. 
 
 
 
@@ -42,7 +42,7 @@ List of algorithms
 - **LSR** variant
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
-        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "[Discriminative elastic-net regularized linear regression[(http://ieeexplore.ieee.org/document/7814255/)," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "[Discriminative elastic-net regularized linear regression(http://ieeexplore.ieee.org/document/7814255/)," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - **Low-rank matrix factorization** based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
@@ -57,13 +57,13 @@ List of algorithms
         - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
 - **SRC** variant
     - **SRC** (Sparse representation classifcation) 
-        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009.
+        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009.
     - **ESRC** (Extended Sparse representation classifcation)
         - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
     - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
         - X. Jiang, and J. Lai, 
         - "Sparse and dense hybrid representation via dictionary decomposition for face recognition," 
-        - IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
+        - IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
 - **Dictionary learning** based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
@@ -87,11 +87,11 @@ Folders and files
 ./README.md                     - This readme file.
 ./run_me_first.m                - The scipt that you need to run first.
 ./demo.m                        - Demonstration script to check and understand this package easily. 
-./test_comparison_syntheric.m   - Demonstration script for synthetic dataset. 
-./test_classification           - Demonstration script for real dataset. 
+|algorithm/                     - Algorithms for classifcations.
 |auxiliary/                     - Some auxiliary tools for this project.
-|covariance_generator/          - Tools for generating covariance descriptors.
+|demo_examples/                 - Some demonstration files.
 |lib/                           - 3rd party tools.
+|dataset/                       - Folder where datasets are stored.
 </pre>
    
 
