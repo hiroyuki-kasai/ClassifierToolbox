@@ -57,7 +57,7 @@ List of algorithms
         - Y. Pang, Y. Yuan, and X. Li, "[Gabor-based Region covariance matrices for face recognition](http://ieeexplore.ieee.org/document/4498432/)," IEEE Transactions on Circuits and Systems for Video Technology vol.18, no.7, 2008.
 - **SRC** variant
     - **SRC** (Sparse representation classifcation) 
-        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
+        - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009.
     - **ESRC** (Extended Sparse representation classifcation)
         - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
     - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
