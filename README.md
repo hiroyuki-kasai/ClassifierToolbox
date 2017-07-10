@@ -1,4 +1,4 @@
-# FaceRecognitionToolbox : A Matlab toolbox for face recognition.
+# ClassifierToolbox : A Matlab toolbox for recognition.
 
 ----------
 
@@ -6,13 +6,13 @@ Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
 Collaborator: Kohei Yoshikawa
 
-Last page update: July 07, 2017
+Last page update: July 10, 2017
 
-Latest library version: 1.0.2 (see Release notes for more info)
+Latest library version: 1.0.3 (see Release notes for more info)
 
 Introduction
 ----------
-This package provides various tools for face recogntion, i.e., classification, applicaiton. 
+This package provides various tools for recogntions, i.e., image classification, face recogntion, and related applicaiton. 
 
 
 
@@ -60,6 +60,10 @@ List of algorithms
         - J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, "[Robust face recognition via sparse representation](http://ieeexplore.ieee.org/document/4483511/)," IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009).
     - **ESRC** (Extended Sparse representation classifcation)
         - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
+    - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
+        - X. Jiang, and J. Lai, 
+        - "Sparse and dense hybrid representation via dictionary decomposition for face recognition," 
+        - IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
 - **Dictionary learning** based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
@@ -87,7 +91,7 @@ Folders and files
 ./test_classification           - Demonstration script for real dataset. 
 |auxiliary/                     - Some auxiliary tools for this project.
 |covariance_generator/          - Tools for generating covariance descriptors.
-|3rd_parth/                     - 3rd party tools.
+|lib/                           - 3rd party tools.
 </pre>
    
 
@@ -188,6 +192,7 @@ License
     - [LC-KSVD](https://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html).
     - [RSR](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0ZVpGRDNLX3NCbXc).
     - [Learning Discriminative Stein Kernel for SPD Matrices and Its Applications](https://github.com/seuzjj/DSK/archive/master.zip).
+    - [SDR-SLR](http://www3.ntu.edu.sg/home/EXDJiang/CodesPAMI2015.zip).
     - DERLR.
     - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
     - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is for [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
@@ -203,6 +208,8 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
+* Version 1.0.3 (July 11, 2017)
+    - Add and modify SDR-SLR etc. 
 * Version 1.0.2 (July 07, 2017)
     - Add and modify RSR, SVM etc. 
 * Version 1.0.1 (July 06, 2017)

@@ -11,7 +11,9 @@ function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambd
 %       accuracy            classification accurary
 %
 % References:
-
+%       J. Wright, A. Yang, A. Ganesh, S. Sastry, and Y. Ma, 
+%       "Robust face recognition via sparse representation," 
+%       IEEE Transaction on Pattern Analysis and Machine Intelligence, vol.31, no.2, pp.210-227, 2009.
 %
 %
 % Created by H.Kasai on July 06, 2017
@@ -61,7 +63,12 @@ function accuracy = src(TrainSet, TestSet, train_num, test_num, class_num, lambd
         y = TestSet.X(:, i);
 
         % calculate sparse code
-        xp = l1_ls(TrainSet.X, y, lambda, 1e-3, 1); 
+        %xp = l1_ls(TrainSet.X, y, lambda, 1e-3, 1); 
+        
+        param.lambda = lambda;
+        param.lambda2 =  0; 
+        param.mode = 2;
+        xp = full(mexLasso(y, TrainSet.X, param));        
 
         % prepare residual array
         residuals = zeros(1, class_num);

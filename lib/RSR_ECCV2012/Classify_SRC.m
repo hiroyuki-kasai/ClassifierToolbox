@@ -8,7 +8,7 @@
 % by the Free Software Foundation, either version 3
 % of the License or (at your option) any later version.
 
-function outLabel=Classify_SRC(A,Labels,x,y,TestLabels,verbose)
+function outLabel = Classify_SRC(A,Labels,x,y,TestLabels,verbose)
 %x: sparse solution
 %y: original query
 

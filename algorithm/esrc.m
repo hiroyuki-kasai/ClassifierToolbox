@@ -71,7 +71,11 @@ function accuracy = esrc(TrainSet, TestSet, train_num, test_num, class_num, lamb
         y = TestSet.X(:, i);
 
         % calculate sparse code
-        xp = l1_ls(combined_X, y, lambda, 1e-3, 1); 
+        %xp = l1_ls(combined_X, y, lambda, 1e-3, 1); 
+        param.lambda = lambda;
+        param.lambda2 =  0; 
+        param.mode = 2;
+        xp = full(mexLasso(y, combined_X, param));            
 
         % calcualte retraction error by variation dictionary 
         y = y - TrainSet.X_sample_mean * xp(train_num+1:end);

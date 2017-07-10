@@ -26,7 +26,7 @@ if 0
     end
 else
 
-    load('../dataset/toy_data_iccv12.mat');
+    load('../dataset/toy_data_eccv12.mat');
     TrainSet.X_cov = TrainSet.X;
     TestSet.X_cov = TestSet.X;
     
@@ -43,7 +43,6 @@ options.lambda = 1e-2;
 options.verbose = true;
 Accuracy_rsr = rsr_classifier(TrainSet, TestSet, options);
 fprintf('# RSR Accuracy = %5.5f\n', Accuracy_rsr);
-
 
 % RSR-DSK (kernel alignment) 
 fprintf('# RSR with DSK (KA) Classification ... ');
