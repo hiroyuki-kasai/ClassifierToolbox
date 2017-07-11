@@ -48,7 +48,7 @@ List of algorithms
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
     - **[Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier**
         - E. Candes, X. Li, Y. Ma, and J. Wright, "[Robust Principal Component Analysis?](http://perception.csl.illinois.edu/matrix-rank/Files/RPCA_JACM.pdf)," Journal of the ACM, vol.58, no.3, 2011.
-        - Clasifier uses SRC.
+        - Classifier uses SRC.
         - Use [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary).
 - **RCM** based
     - **RCM+kNN** (Region covariance matrix algorithm)
@@ -68,7 +68,7 @@ List of algorithms
         - X. Jiang, and J. Lai, "[Sparse and dense hybrid representation via dictionary decomposition for face recognition](http://ieeexplore.ieee.org/document/6905839/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
 - **Dictionary learning** based
     - **K-SVD**
-        - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
+        - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Transactions On Signal Processing, vol.54, no.11, pp.4311-4322, November 2006.
     - **LC-KSVD** (Label Consistent K-SVD)
         - Z. Jiang, Z. Lin, L. S. Davis, "[Learning a discriminative dictionary for sparse coding via label consistent K-SVD](http://ieeexplore.ieee.org/abstract/document/5995354/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2011), 2011.
         - Z. Jiang, Z. Lin, L. S. Davis, "[Label consistent K-SVD: learning A discriminative dictionary for recognition](http://ieeexplore.ieee.org/document/6516503/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.35, no.11, pp.2651-2664, 2013.
