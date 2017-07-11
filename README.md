@@ -62,7 +62,6 @@ List of algorithms
         - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
     - **SSRC** (Superposed sparse representation based classifcation) 
         - W. Deng, J. Hu, and J. Guo, "[In defense of sparsity based face recognition](http://ieeexplore.ieee.org/document/6618902/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2013), 2013.
-%
     - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
         - X. Jiang, and J. Lai, 
         - "Sparse and dense hybrid representation via dictionary decomposition for face recognition," 
