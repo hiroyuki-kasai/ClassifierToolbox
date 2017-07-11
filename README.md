@@ -42,7 +42,7 @@ List of algorithms
 - **LSR** variant
     - **LSR** (Least squares regression)
     - **DERLR** (Discriminative elastic-net regularized linear regression)
-        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "[Discriminative elastic-net regularized linear regression(http://ieeexplore.ieee.org/document/7814255/)," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
+        - Z. Zhang, Z. Lai, Y. Xu, L. Shao and G. S. Xie, "[Discriminative elastic-net regularized linear regression](http://ieeexplore.ieee.org/document/7814255/)," IEEE Transactions on Image Processing, vol.26, no.3, pp.1466-1481, 2017.
 - **Low-rank matrix factorization** based
     - **NMF** (Non-negative matrix factorization)
         - Please refer [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary).
@@ -62,6 +62,8 @@ List of algorithms
         - W. Deng, J. Hu, and J. Guo, "[Extended SRC: Undersampled face recognition via intraclass variant dictionary](http://ieeexplore.ieee.org/document/6133293/)," IEEE Transation on Pattern Analysis Machine Intelligence, vol.34, no.9, pp.1864-1870, 2012.
     - **SSRC** (Superposed sparse representation based classifcation) 
         - W. Deng, J. Hu, and J. Guo, "[In defense of sparsity based face recognition](http://ieeexplore.ieee.org/document/6618902/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2013), 2013.
+    - **SRC-RLS**
+        - M. Iliadis, L. Spinoulas, A. S. Berahas, H. Wang, and A. K. Katsaggelos, "[Sparse representation and least squares-based classification in face recognition](http://ieeexplore.ieee.org/document/6952144/)," Proceedings of the 22nd European Signal Processing Conference (EUSIPCO), 2014.
     - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
         - X. Jiang, and J. Lai, "[Sparse and dense hybrid representation via dictionary decomposition for face recognition](http://ieeexplore.ieee.org/document/6905839/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
 - **Dictionary learning** based
