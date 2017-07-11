@@ -63,9 +63,7 @@ List of algorithms
     - **SSRC** (Superposed sparse representation based classifcation) 
         - W. Deng, J. Hu, and J. Guo, "[In defense of sparsity based face recognition](http://ieeexplore.ieee.org/document/6618902/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2013), 2013.
     - **SDR-SLR** (Sparse- and dense-hybrid representation and supervised low-rank) 
-        - X. Jiang, and J. Lai, 
-        - "Sparse and dense hybrid representation via dictionary decomposition for face recognition," 
-        - IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
+        - X. Jiang, and J. Lai, "[Sparse and dense hybrid representation via dictionary decomposition for face recognition](http://ieeexplore.ieee.org/document/6905839/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.5, pp.1067-1079, 2015.
 - **Dictionary learning** based
     - **K-SVD**
         - M. Aharon, M. Elad, and A.M. Bruckstein, "[The K-SVD: An algorithm for designing of overcomplete dictionaries for sparse representation](http://ieeexplore.ieee.org/document/1710377/)", IEEE Trans. On Signal Processing, Vol.54, no.11, pp.4311-4322, November 2006.
