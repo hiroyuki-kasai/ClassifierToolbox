@@ -57,30 +57,27 @@ end
 
 cd lib/;
 
-cnt = 0;
+lib_num = 4;
 lib_cell = cell(1,lib_num); 
 
-cnt = cnt + 1;
+
 lib_struct.name = 'NMFLibrary-master';
 lib_struct.url = 'https://github.com/hiroyuki-kasai/NMFLibrary/archive/master.zip';
-lib_cell{cnt} = lib_struct;
+lib_cell{1} = lib_struct;
 
-cnt = cnt + 1;
 lib_struct.name = 'SparseGDLibrary-master';
 lib_struct.url = 'https://github.com/hiroyuki-kasai/SparseGDLibrary/archive/master.zip';
-lib_cell{cnt} = lib_struct;
+lib_cell{2} = lib_struct;
 
-cnt = cnt + 1;
 lib_struct.name = 'DSK-master';
 lib_struct.url = 'https://github.com/seuzjj/DSK/archive/master.zip';
-lib_cell{cnt} = lib_struct;
+lib_cell{3} = lib_struct;
 
-cnt = cnt + 1;
 lib_struct.name = 'KMeans_SPD_Matrices';
 lib_struct.url = 'https://jp.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/46343/versions/2/download/zip';
-lib_cell{cnt} = lib_struct;
+lib_cell{4} = lib_struct;
 
-lib_num = cnt;
+
 
 % download files
 for i = 1 : lib_num
