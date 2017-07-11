@@ -1,5 +1,5 @@
-function accuracy = rsr_dsk_classifier(TrainSet, TestSet, options)
-% Sparse representation classification (SRC) with discriminative Stein kernel algorithm
+function accuracy = rksr_dsk_classifier(TrainSet, TestSet, options)
+% Riemannian kernelized sparse representation classification (R-KSRC) with discriminative Stein kernel algorithm
 %
 % Inputs:
 %       TrainSet            train sets of size dxn, where d is dimension and n is number of sets 

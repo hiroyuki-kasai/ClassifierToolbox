@@ -1,5 +1,5 @@
-function accuracy = rsr_classifier(TrainSet, TestSet, options)
-% Sparse representation classification (SRC) algorithm
+function accuracy = rksr_classifier(TrainSet, TestSet, options)
+% Riemannian kernelized sparse representation classification (R-KSRC) algorithm
 %
 % Inputs:
 %       TrainSet            train sets of size dxn, where d is dimension and n is number of sets 

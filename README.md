@@ -1,4 +1,4 @@
-# ClassifierToolbox : A Matlab toolbox for recognition.
+# ClassifierToolbox : A Matlab toolbox for classifier.
 
 ----------
 
@@ -12,7 +12,7 @@ Latest library version: 1.0.3 (see Release notes for more info)
 
 Introduction
 ----------
-This package provides various tools for classification, i.e., image classification, face recogntion, and related applicaiton. 
+This package provides various tools for classification, e.g., image classification, face recogntion, and related applicaitons. 
 
 
 
@@ -71,7 +71,7 @@ List of algorithms
         - Z. Jiang, Z. Lin, L. S. Davis, "[Learning a discriminative dictionary for sparse coding via label consistent K-SVD](http://ieeexplore.ieee.org/abstract/document/5995354/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2011), 2011.
         - Z. Jiang, Z. Lin, L. S. Davis, "[Label consistent K-SVD: learning A discriminative dictionary for recognition](http://ieeexplore.ieee.org/document/6516503/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.35, no.11, pp.2651-2664, 2013.
 - **Geometry-aware**
-    - **RSR** (Riemannian sparse representation)
+    - **R-KSRC** (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
         - M. Harandi, C. Sanderson, R. Hartley and B. Lovell, "[Sparse coding and dictionary learning for symmetric positive definite matrices: a kernel approach](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0eW00U1FVd0xaSmM)," European Conference on Computer Vision (ECCV), 2012.
 
@@ -115,7 +115,7 @@ Run `download` for downloading datasets and external libraries.
 download; 
 ```
 
-- If your computer is behind a proxiy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
+- If your computer is behind a proxy server, please configure your Matlab setting. See [this](http://jp.mathworks.com/help/matlab/import_export/proxy.html?lang=en).
 
 <br />
 
@@ -185,6 +185,11 @@ License
 -------
 - This toobox is **free**, **non-commercial** and **open** source.
 - The code provided in this toobox should only be used for **academic/research purposes**.
+
+<br />
+
+Third party tools, libraries, and packages. 
+-------
 - Third party files are included.
     - [OMPBox](http://www.cs.technion.ac.il/~ronrubin/Software/ompbox10.zip) is used for [OMP](https://en.wikipedia.org/wiki/Matching_pursuit) (orthogonal matching pursuit) algorithm.
     - [KSVDBox](http://www.cs.technion.ac.il/~ronrubin/Software/ksvdbox13.zip) is used for K-SVD algorithm.
@@ -197,6 +202,7 @@ License
     - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
     - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is for [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
     - [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary) is for [Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier.
+- Note that please see the corresponding license for each.
 <br />
 
 

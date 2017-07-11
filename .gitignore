@@ -1,4 +1,4 @@
-tmp_test/
+demo_example_test/
 doc/
 old/
 dataset/
@@ -10,4 +10,5 @@ run_me_first_for_us.m
 lib/NMFLibrary-master
 lib/SparseGDLibrary-master
 lib/DSK-master
+lib/KMeans_SPD_Matrices
 !.gitignore

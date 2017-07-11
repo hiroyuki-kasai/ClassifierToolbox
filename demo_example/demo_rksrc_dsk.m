@@ -34,36 +34,36 @@ else
 end
 
 
-%% RSR
-% RSR Classifier
+%% R-KSRC
+% R-KSRC Classifier
 options.mode = 'src'; % 'src', 'ip_linear', 'ip_max'
 options.original_alpha = true;
 options.theta = 0.01;
 options.lambda = 1e-2;
 options.verbose = true;
-Accuracy_rsr = rsr_classifier(TrainSet, TestSet, options);
-fprintf('# RSR Accuracy = %5.5f\n', Accuracy_rsr);
+Accuracy_rsr = rksr_classifier(TrainSet, TestSet, options);
+fprintf('# R-KSRC Accuracy = %5.5f\n', Accuracy_rsr);
 
-% RSR-DSK (kernel alignment) 
-fprintf('# RSR with DSK (KA) Classification ... ');
+% R-KSRC-DSK (kernel alignment) 
+fprintf('# R-KSRC with DSK (KA) Classification ... ');
 options.mode = 'src'; % 'src', 'ip_linear', 'ip_max'
 options.theta = 0.01;
 options.obj_method = 'ka'; % use kernel alignment criterion.
 options.lambda = 1e-2;
 options.original_alpha = 0;
 options.verbose = true;
-Accuracy_rsr_dsk_ka = rsr_dsk_classifier(TrainSet, TestSet, options);
+Accuracy_rsr_dsk_ka = rksr_dsk_classifier(TrainSet, TestSet, options);
 fprintf('Accuracy = %5.5f\n', Accuracy_rsr_dsk_ka); 
 
-% RSR-DSK (class seperabiliy) 
-fprintf('# RSR with DSK (CS) Classification ... ');
+% R-KSRC-DSK (class seperabiliy) 
+fprintf('# R-KSRC with DSK (CS) Classification ... ');
 options.mode = 'src'; % 'src', 'ip_linear', 'ip_max'
 options.theta = 0.01;
 options.obj_method = 'cs';
 options.lambda = 1e-2;
 options.original_alpha = 0;
 options.verbose = true;
-Accuracy_rsr_dsk_cs = rsr_dsk_classifier(TrainSet, TestSet, options);
+Accuracy_rsr_dsk_cs = rksr_dsk_classifier(TrainSet, TestSet, options);
 fprintf('Accuracy = %5.5f\n', Accuracy_rsr_dsk_cs);       
 
 
@@ -109,9 +109,9 @@ fprintf('Accuracy = %5.5f\n', Accuracy_knn_dsk_cs);
 
 %% display accuracy
 fprintf('\n\n## Summary of results\n\n')
-fprintf('# RSR: Accuracy = %5.5f\n', Accuracy_rsr);
-fprintf('# RSR-DSK-KA: Accuracy = %5.5f\n', Accuracy_rsr_dsk_ka); 
-fprintf('# RSR-DSK-CS: Accuracy = %5.5f\n', Accuracy_rsr_dsk_cs);
+fprintf('# R-KSRC: Accuracy = %5.5f\n', Accuracy_rsr);
+fprintf('# R-KSRC-DSK-KA: Accuracy = %5.5f\n', Accuracy_rsr_dsk_ka); 
+fprintf('# R-KSRC-DSK-CS: Accuracy = %5.5f\n', Accuracy_rsr_dsk_cs);
 fprintf('# kNN: Accuracy = %5.5f\n', Accuracy_knn);
 fprintf('# kNN-DSK-KA: Accuracy = %5.5f\n', Accuracy_knn_dsk_ka); 
 fprintf('# kNN-DSK-CS: Accuracy = %5.5f\n', Accuracy_knn_dsk_cs);

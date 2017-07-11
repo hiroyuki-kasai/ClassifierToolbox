@@ -74,6 +74,11 @@ lib_struct.url = 'https://github.com/seuzjj/DSK/archive/master.zip';
 lib_cell{3} = lib_struct;
 
 
+lib_struct.name = 'KMeans_SPD_Matrices';
+lib_struct.url = 'https://jp.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/46343/versions/2/download/zip';
+lib_cell{4} = lib_struct;
+
+
 % download files
 for i = 1 : lib_num
     file_name = lib_cell{i}.name;
