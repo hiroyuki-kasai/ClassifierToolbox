@@ -44,22 +44,24 @@ options.verbose = true;
 Accuracy_rksr_stein = rksr_classifier(TrainSet, TestSet, options);
 fprintf('# R-KSRC (Stein): Accuracy = %5.5f\n', Accuracy_rksr_stein);
 
-
-% %% R-KSRC (Log Euclidean kernel)
-% clear options;
-% options.kernel = 'Log-E Gauss.' ;
-% options.mu = 0.01;
-% options.d = 43;
-% options.n = 50;
-% options.Beta = 2e-2;
-% options.SR_Lambda = 1e-3;
-% Accuracy_rksr_logeuc = SPD_SRC_Classification(TrainSet, TestSet, options);
-% fprintf('# R-KSRC (LogEuc): Accuracy = %5.5f\n', Accuracy_rksr_logeuc);
-
+%% R-KSRC (Log Euclidean kernel)
+clear options;
+% The types of kernel:  
+% 'Log-E poly.' -- Log-Euclidean polynomial kernel
+% 'Log-E exp.' -- Log-Euclidean exponential kernel
+% 'Log-E Gauss.' --Log-Euclidean Gaussian kernel
+options.kernel = 'Log-E poly.' ; 
+%options.mu = 0.01;
+options.d = 43;
+options.n = 50; % The degree of monomial in polynomial kernel or exponential kernel
+options.Beta = 2e-2;% The parameter $\beta$ in the Gaussian kernel
+options.SR_Lambda = 1e-3;% The regularizing coefficient in the objective of sparse coding
+Accuracy_rksr_logeuc = LogEuc_SPD_SRC_Classification(TrainSet, TestSet, options);
+fprintf('# R-KSRC (LogEuc): Accuracy = %5.5f\n', Accuracy_rksr_logeuc);
 
 
 %% display accuracy
 fprintf('\n\n## Summary of results\n\n')
 fprintf('# R-KSRC (Stein): Accuracy = %5.5f\n', Accuracy_rksr_stein);
-%fprintf('# R-KSRC (LogEuc): Accuracy = %5.5f\n', Accuracy_rksr_logeuc);
+fprintf('# R-KSRC (LogEuc): Accuracy = %5.5f\n', Accuracy_rksr_logeuc);
 

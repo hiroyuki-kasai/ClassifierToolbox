@@ -76,10 +76,10 @@ List of algorithms
     - **R-KSRC (Stein kernel)** (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
         - M. Harandi, C. Sanderson, R. Hartley and B. Lovell, "[Sparse coding and dictionary learning for symmetric positive definite matrices: a kernel approach](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0eW00U1FVd0xaSmM)," European Conference on Computer Vision (ECCV), 2012.
+    -**R-KSRC (Log-Euclidean kernel)** (Riemannian kernelized sparse representation classification)
+        - P. Li, Q. Wang, W. Zuo, and L. Zhang, "[Log-Euclidean kernels for sparse representation and dictionary learning](http://ieeexplore.ieee.org/document/6751309/)," IEEE International Conference on Computer Vision (ICCV), 2013.
     - [Reference] **R-KSRC (Deta-dependent kernel)** [Not included in this package]
         - Y. Wu, Y. Jia, P. Li, J. Zhang, and J. Yuan, "[Manifold kernel sparse representation of symmetric positive definite matrices and its applications](http://ieeexplore.ieee.org/document/7145428/)," IEEE Transactions on Image Processing, vol.24, no.11, 2015.
-
-
 
 <br />
 
@@ -202,6 +202,7 @@ Third party tools, libraries, and packages.
     - [RSR](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0ZVpGRDNLX3NCbXc).
     - [Learning Discriminative Stein Kernel for SPD Matrices and Its Applications](https://github.com/seuzjj/DSK/archive/master.zip).
     - [SDR-SLR](http://www3.ntu.edu.sg/home/EXDJiang/CodesPAMI2015.zip).
+    - [*R-KSRC (Log-Euclidean kernel)](http://www4.comp.polyu.edu.hk/~cslzhang/LogEKernel_Project/ICCV_LogEKernel_Code.zip).
     - DERLR.
     - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
     - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is for [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
