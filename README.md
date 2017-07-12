@@ -73,9 +73,11 @@ List of algorithms
         - Z. Jiang, Z. Lin, L. S. Davis, "[Learning a discriminative dictionary for sparse coding via label consistent K-SVD](http://ieeexplore.ieee.org/abstract/document/5995354/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2011), 2011.
         - Z. Jiang, Z. Lin, L. S. Davis, "[Label consistent K-SVD: learning A discriminative dictionary for recognition](http://ieeexplore.ieee.org/document/6516503/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.35, no.11, pp.2651-2664, 2013.
 - **Geometry-aware**
-    - **R-KSRC** (Riemannian kernelized sparse representation classification)
+    - **R-KSRC (Stein kernel)** (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
         - M. Harandi, C. Sanderson, R. Hartley and B. Lovell, "[Sparse coding and dictionary learning for symmetric positive definite matrices: a kernel approach](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0eW00U1FVd0xaSmM)," European Conference on Computer Vision (ECCV), 2012.
+    - [Reference] **R-KSRC (Deta-dependent kernel)** [Not included in this package]
+        - Y. Wu, Y. Jia, P. Li, J. Zhang, and J. Yuan, "[Manifold kernel sparse representation of symmetric positive definite matrices and its applications](http://ieeexplore.ieee.org/document/7145428/)," IEEE Transactions on Image Processing, vol.24, no.11, 2015.
 
 
 
