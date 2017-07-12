@@ -78,7 +78,7 @@ List of algorithms
     - **R-KSRC (Stein kernel)** (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
         - M. Harandi, C. Sanderson, R. Hartley and B. Lovell, "[Sparse coding and dictionary learning for symmetric positive definite matrices: a kernel approach](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0eW00U1FVd0xaSmM)," European Conference on Computer Vision (ECCV), 2012.
-    -**R-KSRC (Log-Euclidean kernel)** (Riemannian kernelized sparse representation classification)
+    - **R-KSRC (Log-Euclidean kernel)** (Riemannian kernelized sparse representation classification)
         - P. Li, Q. Wang, W. Zuo, and L. Zhang, "[Log-Euclidean kernels for sparse representation and dictionary learning](http://ieeexplore.ieee.org/document/6751309/)," IEEE International Conference on Computer Vision (ICCV), 2013.
         - S. Jayasumana, R. Hartley, M. Salzmann, H. Li, and M. Harandi, "[Kernel methods on the Riemannian manifold of symmetric positive definite matrices](http://ieeexplore.ieee.org/document/6618861/)," IEEE Conference on Computer Vision and Pattern Recognition (CVPR2013), 2013.
         - S. Jayasumana, R. Hartley, M. Salzmann, H. Li, and M. Harandi, "[Kernel methods on the Riemannian manifold with Gaussian RBF Kernels](http://ieeexplore.ieee.org/document/7063231/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.12, 2015.
