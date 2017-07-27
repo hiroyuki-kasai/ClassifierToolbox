@@ -9,7 +9,8 @@ function out=sdivLasso(B,X,lam,mit,algo,gamma)
    
    prx  = @(x) proj(x);
    x0   = ones(numel(B),1); x0 = x0/sum(x0);
-   options.verbose=0;
+   options.verbose = 0;
+   options.testOpt = 1;
    [out.x,out.f,out.funEvals,out.projects,out.itertime,out.info] = cleanSPG(gfx,x0,prx,mit,options);
 end
 

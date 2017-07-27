@@ -6,9 +6,9 @@ Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
 Collaborator: Kohei Yoshikawa
 
-Last page update: July 11, 2017
+Last page update: July 27, 2017
 
-Latest library version: 1.0.4 (see Release notes for more info)
+Latest library version: 1.0.5 (see Release notes for more info)
 
 Introduction
 ----------
@@ -74,6 +74,9 @@ List of algorithms
         - Z. Jiang, Z. Lin, L. S. Davis, "[Label consistent K-SVD: learning A discriminative dictionary for recognition](http://ieeexplore.ieee.org/document/6516503/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.35, no.11, pp.2651-2664, 2013.
     - **FDDL** (Fisher Discriminative Dictionary Learning)
         - M. Yang, L. Zhang, X. Feng, and D. Zhang, "[Fisher discrimination dictionary learning for sparse representation](http://ieeexplore.ieee.org/document/6126286/)," IEEE International Conference on Computer Vision (ICCV), 2011.
+    - **JDDRDL**
+        - Z. Feng, M. Yang, L. Zhang, Y. Liu, and D. Zhang, "[Joint discriminative dimensionality reduction and dictionary learning
+for face recognition](http://www.sciencedirect.com/science/article/pii/S0031320313000538)," Pattern Recognition, vol.46, pp.2134-2143, 2013.  
 - **Geometry-aware**
     - **R-KSRC (Stein kernel)** (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
@@ -209,6 +212,7 @@ Third party tools, libraries, and packages.
     - [SDR-SLR](http://www3.ntu.edu.sg/home/EXDJiang/CodesPAMI2015.zip).
     - [R-KSRC (Log-Euclidean kernel)](http://www4.comp.polyu.edu.hk/~cslzhang/LogEKernel_Project/ICCV_LogEKernel_Code.zip).
     - DERLR.
+    - [JDDRDL]();
     - [JACOBI_EIGENVALUE](https://people.sc.fsu.edu/~jburkardt/m_src/jacobi_eigenvalue/jacobi_eigenvalue.html) is a MATLAB library which computes the eigenvalues and eigenvectors of a real symmetric matrix.
     - [NMFLibrary](https://github.com/hiroyuki-kasai/NMFLibrary) is for [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization).
     - [SparseGDLibrary](https://github.com/hiroyuki-kasai/SparseGDLibrary) is for [Robust PCA](https://en.wikipedia.org/wiki/Robust_principal_component_analysis) classifier.
@@ -224,6 +228,8 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
+* Version 1.0.5 (July 27, 2017)
+    - Add JDDRDL and others. 
 * Version 1.0.4 (July 11, 2017)
     - Add and modify SSRC etc. 
 * Version 1.0.3 (July 10, 2017)

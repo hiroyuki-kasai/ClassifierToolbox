@@ -27,13 +27,15 @@ function [S] = EigComp2SD_power_new(decompX,decompY,alpha)
         D_y = [];
     end
 
-    n_X = length(V_x);
+    %n_X = length(V_x); % HK
+    n_X = size(V_x, 3);
     if(n_X == 0)
         disp('X is empty, error!');
         return;
     else
         dim = size(V_x,1);
-        n_Y = length(V_y);
+        %n_Y = length(V_y);
+        n_Y = size(V_y,3); % HK
     end
 
     % extract eigenvalues and check PSD for input;

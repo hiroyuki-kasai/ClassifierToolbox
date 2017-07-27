@@ -1,9 +1,10 @@
-function accuracy = crc(TrainSet, TestSet, test_num, class_num, lambda, options)
+function accuracy = crc(TrainSet, TestSet, train_num, test_num, class_num, lambda, options)
 % Collaborative representation based classification (CRC) algorithm
 %
 % Inputs:
 %       TrainSet            train sets of size dxn, where d is dimension and n is number of sets 
 %       TestSet             test sets of size dxn, where d is dimension and n is number of sets
+%       train_num           numner of train sets
 %       test_num            numner of test sets
 %       class_num           numner of classes
 %       lambda              regularization paramter
@@ -79,7 +80,7 @@ function accuracy = crc(TrainSet, TestSet, test_num, class_num, lambda, options)
         identity(i) = label;
         
         if verbose
-            correct = (label == TestSet.y(1, j));
+            correct = (label == TestSet.y(1, i));
             fprintf('# CRC: test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);            
         end     
     end

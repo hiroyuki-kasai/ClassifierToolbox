@@ -39,27 +39,29 @@ function accuracy = esrc(TrainSet, TestSet, train_num, test_num, class_num, lamb
     end     
 
 
-    % generate intra-class variant dictionary (base)
-    classes = unique(TrainSet.y); 
-    dim = size(TrainSet.X, 1);
-    TrainSet.D_I = zeros(dim, train_num);
-    for j = 1 : class_num
-        idx = find(TrainSet.y == classes(j)); 
+     if ~isfield(TrainSet, 'D_I')
+        % generate intra-class variant dictionary (base)
+        classes = unique(TrainSet.y); 
+        dim = size(TrainSet.X, 1);
+        TrainSet.D_I = zeros(dim, train_num);
+        for j = 1 : class_num
+            idx = find(TrainSet.y == classes(j)); 
 
-        data = TrainSet.X(:, idx);
-        centroid = sum(data,2)/size(data,2);
+            data = TrainSet.X(:, idx);
+            centroid = sum(data,2)/size(data,2);
 
-        % calculate logmap of centroid to each sample
-        len = length(idx);
-        for k = 1 : len
-            diff = TrainSet.X(:, idx(k)) - centroid;                % Eq.(5)
-            TrainSet.D_I(:, idx(k)) = real(diff);
-        end
+            % calculate logmap of centroid to each sample
+            len = length(idx);
+            for k = 1 : len
+                diff = TrainSet.X(:, idx(k)) - centroid;                % Eq.(5)
+                TrainSet.D_I(:, idx(k)) = real(diff);
+            end
 
-        if verbose
-            fprintf('# Generating IntraVariDictionary for class %d\n', j);
-        end
-    end     
+            if verbose
+                fprintf('# Generating IntraVariDictionary for class %d\n', j);
+            end
+        end    
+     end
 
     % generate eigenface
     if eigenface    
@@ -90,11 +92,55 @@ function accuracy = esrc(TrainSet, TestSet, train_num, test_num, class_num, lamb
         y = TestSet.X(:, i);
 
         % calculate sparse code
-        %xp = l1_ls(combined_X, y, lambda, 1e-3, 1); 
-        param.lambda = lambda;
-        param.lambda2 =  0; 
-        param.mode = 2;
-        alpha_beta = full(mexLasso(y, combined_X, param));          % Eq.(7)        
+        if 0
+            % calculate sparse code
+            %tau = max(1e-4*max(abs(TrainSet.X'*y)),sigma*sqrt(log(train_num)));
+            tau = lambda;
+
+            in = [];   
+            in.tau = tau;
+            delx_mode = 'qr'; % mil or qr
+            in.delx_mode = delx_mode;
+            in.debias = 0;
+            in.verbose = 0;
+            in.plots = 0;
+
+            out = l1homotopy(combined_X, y, in);
+            alpha_beta = out.x_out;
+            
+        elseif 1
+            
+            P = inv(combined_X'*combined_X+0.001*eye(size(combined_X,2)))*combined_X';
+            x0 = P*y;            
+            
+            maxIteration = 5000;
+            isNonnegative = false;
+            lambda = 1e-2; %5e-3;
+            tolerance = 0.05;
+            STOPPING_GROUND_TRUTH = -1;
+            STOPPING_DUALITY_GAP = 1;
+            STOPPING_SPARSE_SUPPORT = 2;
+            STOPPING_OBJECTIVE_VALUE = 3;
+            STOPPING_SUBGRADIENT = 4;
+            stoppingCriterion = STOPPING_GROUND_TRUTH;
+            [alpha_beta, iterationCount] = SolveHomotopy(combined_X, y, ...
+                            'maxIteration', maxIteration,...
+                            'isNonnegative', isNonnegative, ...
+                            'stoppingCriterion', stoppingCriterion, ...
+                            'groundtruth', x0, ...
+                            'lambda', lambda, ...
+                            'tolerance', tolerance);  
+                        
+        elseif 0
+            alpha_beta = l1_ls(combined_X, y, 1e-3); 
+        else
+        
+            param.lambda = lambda;
+            param.lambda2 =  0; 
+            param.mode = 0;
+            alpha_beta = full(mexLasso(y, combined_X, param));   
+        end
+        
 
         % prepare residual array
         residuals = zeros(1, class_num);
@@ -104,7 +150,8 @@ function accuracy = esrc(TrainSet, TestSet, train_num, test_num, class_num, lamb
             non_idx = find(TrainSet.y ~= classes(j));
             sc = alpha_beta;
             sc(non_idx) = 0;
-            residuals(j) = norm(y - combined_X*sc)/sum(sc.*sc);     % Eq.(8)
+            %residuals(j) = norm(y - combined_X*sc)/sum(sc.*sc);     % Eq.(8)
+            residuals(j) = norm(y - combined_X*sc);     % Eq.(8)
         end
 
         % calculate the predicted label with minimum residual
@@ -113,8 +160,8 @@ function accuracy = esrc(TrainSet, TestSet, train_num, test_num, class_num, lamb
         
         if verbose
             correct = (label == TestSet.y(1, i));
-            fprintf('# ESRC: test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);
-        end           
+            fprintf('# ESRC: test:%04d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);
+        end 
 
     end
 

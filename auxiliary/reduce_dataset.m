@@ -1,4 +1,4 @@
-function [TrainSet, TestSet, train_num, test_num, class_num] = reduce_dataset(TrainSet, TestSet, max_class_num, max_samples)
+function [TrainSet, TestSet, train_num, test_num, class_num] = reduce_dataset(TrainSet, TestSet, max_class_num, max_train_samples, max_test_samples)
 
     TrainSetSmall.X = [];
     TrainSetSmall.y = [];
@@ -12,15 +12,21 @@ function [TrainSet, TestSet, train_num, test_num, class_num] = reduce_dataset(Tr
     
     for i=1:max_class_num
         class_index = find(TrainSet.y == i);
-        if length(class_index) > max_samples
-            class_index = class_index(1: max_samples);
+        if length(class_index) > max_train_samples
+            %class_index = class_index(1: max_samples);
+            class_index_rnd = randperm(length(class_index));
+            class_index_tmp = class_index(class_index_rnd);
+            class_index = class_index_tmp(1: max_train_samples);
         end
         TrainSetSmall.X = [TrainSetSmall.X TrainSet.X(:, class_index)];
         TrainSetSmall.y = [TrainSetSmall.y TrainSet.y(1, class_index)];
 
         class_index = find(TestSet.y == i);
-        if length(class_index) > max_samples
-            class_index = class_index(1: max_samples);
+        if length(class_index) > max_test_samples
+            %class_index = class_index(1: max_samples);
+            class_index_rnd = randperm(length(class_index));
+            class_index_tmp = class_index(class_index_rnd);
+            class_index = class_index_tmp(1: max_test_samples);         
         end    
         TestSetSmall.X = [TestSetSmall.X TestSet.X(:, class_index)];
         TestSetSmall.y = [TestSetSmall.y TestSet.y(1, class_index)];    
