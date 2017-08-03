@@ -35,7 +35,12 @@ function [S] = EigComp2SD_power_new(decompX,decompY,alpha)
     else
         dim = size(V_x,1);
         %n_Y = length(V_y);
-        n_Y = size(V_y,3); % HK
+        
+        if ~isempty(V_y)        % HK
+            n_Y = size(V_y,3);  % HK
+        else                    % HK
+            n_Y = 0;            % HK
+        end
     end
 
     % extract eigenvalues and check PSD for input;

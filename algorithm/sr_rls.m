@@ -102,55 +102,68 @@ function accuracy = sr_rls(TrainSet, TestSet, train_num, test_num, class_num, la
         param.mode = 2;
         alpha = full(mexLasso(y, XV.X, param));        % (Eq.12) 
         
-        % chose active classes: (Eq.7)
-        active_class_idx = [];
-        cnt = 1;
-        for j = 1 : class_num
-            idx = TrainSet.y == classes(j);
-            if find(alpha(idx)>0)
-            %if find(abs(alpha(idx))>0)
-                active_class_idx(cnt) = j;
-                cnt = cnt+1;
+        if nnz(alpha) > 0
+        
+            % chose active classes: (Eq.7)
+            active_class_idx = [];
+            cnt = 1;
+            for j = 1 : class_num
+                idx = TrainSet.y == classes(j);
+                if find(alpha(idx)>0)
+                %if find(abs(alpha(idx))>0)
+                    active_class_idx(cnt) = j;
+                    cnt = cnt+1;
+                end
             end
+            
+            if ~isempty(active_class_idx)
+
+                % generate new dictionary: tilde{T} : (Eq.8)
+                new_dic = [];
+                for aa = 1 : length(active_class_idx)
+                    idx_columns = find(TrainSet.y == classes(active_class_idx(aa)));    
+                    get_train = TrainSet.X(:,idx_columns(1):max(idx_columns));    
+                    new_dic = [new_dic get_train];    
+                end
+
+
+                % solve regularized least squares (RLS) step: (Eq.9) and (Eq.10)
+                [R, p] = chol(new_dic'*new_dic + eye(size(new_dic'*new_dic,2)).*lambda_l2);
+                alpha_tmp = R \ (R' \ (new_dic'*y));             
+
+
+                % generate new sparse coefficients (tilde{f}_i)
+                new_alpha = zeros(train_num*2, 1);
+                max_col = 0;
+                for j = 1 : length(active_class_idx)
+                    idx_columns = find(TrainSet.y == classes(active_class_idx(j)));
+                    len = length(idx_columns);
+                    new_alpha(idx_columns(1):max(idx_columns)) = alpha_tmp(max_col+1:max_col+len);
+                    max_col = max_col+len;
+                end        
+
+                % prepare residual array
+                residuals = zeros(1, class_num);
+
+                % calculate residual for each class
+                for j = 1 : class_num
+                    idx = find(TrainSet.y == classes(j));
+                    residuals(j) = norm(y - XV.X(:,idx) * new_alpha(idx),2);
+                end
+
+                % calculate the predicted label with minimum residual
+                [~, label] = min(residuals); 
+                identity(i) = label;
+                
+            else
+                label = -1;
+                identity(i) = label;                
+            end
+        else
+            label = -1;
+            identity(i) = label;
         end
 
-        % generate new dictionary: tilde{T} : (Eq.8)
-        new_dic = [];
-        for aa = 1 : length(active_class_idx)
-            idx_columns = find(TrainSet.y == classes(active_class_idx(aa)));    
-            get_train = TrainSet.X(:,idx_columns(1):max(idx_columns));    
-            new_dic = [new_dic get_train];    
-        end
-
-        
-        % solve regularized least squares (RLS) step: (Eq.9) and (Eq.10)
-        [R, p] = chol(new_dic'*new_dic + eye(size(new_dic'*new_dic,2)).*lambda_l2);
-        alpha_tmp = R \ (R' \ (new_dic'*y));             
-        
-        
-        % generate new sparse coefficients (tilde{f}_i)
-        new_alpha = zeros(train_num*2, 1);
-        max_col = 0;
-        for j = 1 : length(active_class_idx)
-            idx_columns = find(TrainSet.y == classes(active_class_idx(j)));
-            len = length(idx_columns);
-            new_alpha(idx_columns(1):max(idx_columns)) = alpha_tmp(max_col+1:max_col+len);
-            max_col = max_col+len;
-        end        
-
-        % prepare residual array
-        residuals = zeros(1, class_num);
-        
-        % calculate residual for each class
-        for j = 1 : class_num
-            idx = find(TrainSet.y == classes(j));
-            residuals(j) = norm(y - XV.X(:,idx) * new_alpha(idx),2);
-        end
-
-        % calculate the predicted label with minimum residual
-        [~, label] = min(residuals); 
-        identity(i) = label;
-        
         if verbose
             correct = (label == TestSet.y(1, i));
             fprintf('# SRC-RLS: test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', i, label, TestSet.y(1, i), correct);

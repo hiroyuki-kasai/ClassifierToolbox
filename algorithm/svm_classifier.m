@@ -75,6 +75,8 @@ function accuracy = svm_classifier(TrainSet, TestSet, train_num, test_num, class
 		label = find(prediction == 1);
         if isempty(label)
             label = -1;
+        elseif length(label) > 1
+            label = label(1);
         end
         identity(i) = label;
         

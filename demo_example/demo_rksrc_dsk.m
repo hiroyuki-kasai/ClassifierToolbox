@@ -1,4 +1,4 @@
-% demo.m 
+% demo_rksrc_sdk.m 
 
 close all;
 clear;
@@ -26,10 +26,8 @@ if 0
     end
 else
 
-    load('../dataset/toy_data_eccv12.mat');
-    TrainSet.X_cov = TrainSet.X;
-    TestSet.X_cov = TestSet.X;
-    
+    load('../dataset/test_cov.mat');
+        
     class_num = length(unique(TestSet.y));
 end
 
@@ -105,6 +103,7 @@ clear options;
 options.verbose = true;
 Accuracy_knn_dsk_cs = kernel_knn_classification_new(test_kernel,TrainSet.y,class_num,TestSet.y,options);
 fprintf('Accuracy = %5.5f\n', Accuracy_knn_dsk_cs);
+
 
 
 %% display accuracy

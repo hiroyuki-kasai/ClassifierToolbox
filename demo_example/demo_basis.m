@@ -7,21 +7,28 @@ clc;
 %load('../dataset/ORL_Face_img.mat');
 %load('../dataset/Brodatz_texture_img_small_set.mat');
 %load('../dataset/AR_Face_img_27x20.mat'); 
-load('../dataset/AR_Face_img_60x43.mat'); 
-%load('../dataset/USPS.mat'); 
+%load('../dataset/AR_Face_img_60x43.mat'); 
+load('../dataset/USPS.mat'); 
 %load('../dataset/MNIST.mat');
 %load('../dataset/COIL20.mat');
 %load('../dataset/COIL100.mat');
 
 
-% set paramters
-eigenface_flag = true;
-
 
 %% reduce dataset for a quick test if necessary
 max_class_num = 10;
-max_samples = 5;
-[TrainSet, TestSet, train_num, test_num, class_num] = reduce_dataset(TrainSet, TestSet, max_class_num, max_samples);
+max_train_samples = 2;
+max_test_samples = 15;
+[TrainSet, TestSet, train_num, test_num, class_num] = reduce_dataset(TrainSet, TestSet, max_class_num, max_train_samples, max_test_samples);
+
+
+%% set paramters
+eigenface_flag = true;
+eigenface_dim = floor(train_num/2); % example
+dim = size(TrainSet.X, 1);
+if eigenface_dim > dim
+    eigenface_dim = dim;
+end
 
 
 %% normalize dataset
@@ -32,7 +39,7 @@ max_samples = 5;
 %% SVM
 options.verbose = true;
 options.eigenface = eigenface_flag;
-options.eigenface_dim = 15;
+options.eigenface_dim = eigenface_dim;
 accuracy_svm = svm_classifier(TrainSet, TestSet, train_num, test_num, class_num, options);
 fprintf('# SVM: Accuracy = %5.5f\n', accuracy_svm);
 
@@ -54,59 +61,18 @@ fprintf('# LRC: Accuracy = %5.5f\n', accuracy_lrc);
 %% LDRC
 clear options;
 options.verbose = true;
-reduce_dimension = size(TrainSet_normalized.X, 1);
-accuracy_ldrc = ldrc(TrainSet_normalized, TestSet_normalized, train_num, test_num, class_num, reduce_dimension, options);
+accuracy_ldrc = ldrc(TrainSet_normalized, TestSet_normalized, train_num, test_num, class_num, eigenface_dim, options);
 fprintf('# LDRC: Accuracy = %5.5f\n', accuracy_ldrc);
 
 
 %% LCDRC
 clear options;
 options.verbose = true;
-reduce_dimension = size(TrainSet_normalized.X, 1);
-%reduce_dimension = 470;
-accuracy_lcdrc = lcdrc(TrainSet_normalized, TestSet_normalized, train_num, test_num, class_num, reduce_dimension, options);
+accuracy_lcdrc = lcdrc(TrainSet_normalized, TestSet_normalized, train_num, test_num, class_num, eigenface_dim, options);
 fprintf('# LCDRC: Accuracy = %5.5f\n', accuracy_lcdrc);
 
 
-%% CRC
-clear options;
-dimension = max_class_num*max_samples; % This should not be greater than (max_class_num*max_samples).
-lambda = 0.001;
-options.verbose = true;
-options.eigenface = eigenface_flag;
-options.eigenface_dim = max_class_num*max_samples;
-accuracy_crc = crc(TrainSet, TestSet, train_num, test_num, class_num, lambda, options);
-fprintf('# CRC: Accuracy = %5.5f\n', accuracy_crc);
 
-
-%% SRC
-clear options;
-lambda = 0.001;
-options.verbose = true;
-options.eigenface = eigenface_flag;
-options.eigenface_dim = max_class_num*max_samples;
-accuracy_src = src(TrainSet, TestSet, train_num, test_num, class_num, lambda, options);
-fprintf('# SRC Accuracy = %5.5f\n', accuracy_src);
-
-
-%% ESRC
-clear options;
-lambda = 0.001;
-options.verbose = true;
-options.eigenface = eigenface_flag;
-options.eigenface_dim = max_class_num*max_samples;
-accuracy_esrc = esrc(TrainSet, TestSet, train_num, test_num, class_num, lambda, options);
-fprintf('# ESRC Accuracy = %5.5f\n', accuracy_esrc);
-
-
-%% RobustPCA-SRC
-lambda = 0.001;
-options.verbose = true;
-options.eigenface = eigenface_flag;
-options.eigenface_dim = max_class_num*max_samples;
-options.solver_max_iter = 5;
-accuracy_robust_pca = rpca_src(TrainSet, TestSet, train_num, test_num, class_num, lambda, options);
-fprintf('# RobustPCA-SRC: Accuracy = %5.5f\n', accuracy_robust_pca);
 
 
 %% display accuracy
@@ -116,7 +82,3 @@ fprintf('# LSR: Accuracy = %5.5f\n', accuracy_lsr);
 fprintf('# LRC: Accuracy = %5.5f\n', accuracy_lrc);
 fprintf('# LDRC: Accuracy = %5.5f\n', accuracy_ldrc);
 fprintf('# LCDRC: Accuracy = %5.5f\n', accuracy_lcdrc);
-fprintf('# CRC: Accuracy = %5.5f\n', accuracy_crc);
-fprintf('# SRC: Accuracy = %5.5f\n', accuracy_src);
-fprintf('# ESRC: Accuracy = %5.5f\n', accuracy_esrc);
-fprintf('# RobustPC-SRC: Accuracy = %5.5f\n', accuracy_robust_pca);
