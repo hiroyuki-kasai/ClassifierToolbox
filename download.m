@@ -17,11 +17,11 @@ end
 
 % remote url, path, and filelist
 site_url = 'https://dl.dropboxusercontent.com/';
-site_path = 'u/869853/Github/FaceRecognitionToolbox/dataset/';
+site_path = 'u/869853/Github/ClassifierToolbox/dataset/';
 filename_array = {'ORL_Face_img.mat', 'ORL_Face_img_cov.mat', 'AR_Face_img_27x20.mat', ...
                     'AR_Face_img_60x43.mat','Brodatz_texture_img_small_set.mat', ...
                     'USPS.mat', 'MNIST.mat', ...
-                    '', ''};
+                    'test_cov.mat'};
 dataset_num = length(filename_array);
 
 % download files

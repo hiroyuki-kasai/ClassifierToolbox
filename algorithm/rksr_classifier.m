@@ -91,7 +91,7 @@ function accuracy = rksr_classifier(TrainSet, TestSet, options)
         
         if options.verbose
             correct = (label == TestSet.y(1, i));
-            fprintf('# RSR (with %s metric): test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', options.mode, i, label, TestSet.y(1, i), correct);
+            fprintf('# R-KSR (with %s metric): test:%03d, predict class: %03d --> ground truth :%03d (%d)\n', options.mode, i, label, TestSet.y(1, i), correct);
         end           
     end
 

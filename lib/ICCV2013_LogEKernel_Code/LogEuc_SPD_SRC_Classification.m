@@ -19,8 +19,8 @@ function [accuracy] = LogEuc_SPD_SRC_Classification(TrainSet,TestSet,Lparam)
 % warranty of merchantability or fitness for a particular purpose.
 
     %% Compute kernel matrix
-    [training_kernel] = LogE_Kernels_HK(TrainSet,TrainSet,Lparam);
-    [test_kernel]  = LogE_Kernels_HK(TestSet,TrainSet,Lparam);
+    [training_kernel] = LogE_Kernels(TrainSet,TrainSet,Lparam);
+    [test_kernel]  = LogE_Kernels(TestSet,TrainSet,Lparam);
     test_kernel = test_kernel';
 
     %% Kernel based sparse represenation (SR)

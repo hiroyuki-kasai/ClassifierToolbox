@@ -6,9 +6,9 @@ Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
 Collaborator: Kohei Yoshikawa
 
-Last page update: July 27, 2017
+Last page update: Aug. 03, 2017
 
-Latest library version: 1.0.5 (see Release notes for more info)
+Latest library version: 1.0.6 (see Release notes for more info)
 
 Introduction
 ----------
@@ -78,7 +78,9 @@ List of algorithms
         - Z. Feng, M. Yang, L. Zhang, Y. Liu, and D. Zhang, "[Joint discriminative dimensionality reduction and dictionary learning
 for face recognition](http://www.sciencedirect.com/science/article/pii/S0031320313000538)," Pattern Recognition, vol.46, pp.2134-2143, 2013.  
 - **Geometry-aware**
-    - **R-KSRC (Stein kernel)** (Riemannian kernelized sparse representation classification)
+    - **R-SRC and R-DL-SC** (Riemannian dictionary learning and sparse coding for positive definite matrices)
+        - A. Cherian and S. Sra, "[Riemannian dictionary learning and sparse coding for positive definite matrices](http://ieeexplore.ieee.org/document/7565529/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
+    - **R-KSRC (Stein kernel)** (a.k.a. RSR) (Riemannian kernelized sparse representation classification)
         - M. Harandi, R. Hartley, B. Lovell and C. Sanderson, "[Sparse coding on symmetric positive definite manifolds using bregman divergences](http://ieeexplore.ieee.org/document/7024121/)," IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2016.
         - M. Harandi, C. Sanderson, R. Hartley and B. Lovell, "[Sparse coding and dictionary learning for symmetric positive definite matrices: a kernel approach](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0eW00U1FVd0xaSmM)," European Conference on Computer Vision (ECCV), 2012.
     - **R-KSRC (Log-Euclidean kernel)** (Riemannian kernelized sparse representation classification)
@@ -87,7 +89,8 @@ for face recognition](http://www.sciencedirect.com/science/article/pii/S00313203
         - S. Jayasumana, R. Hartley, M. Salzmann, H. Li, and M. Harandi, "[Kernel methods on the Riemannian manifold with Gaussian RBF Kernels](http://ieeexplore.ieee.org/document/7063231/)," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol.37, no.12, 2015.
     - [Reference] **R-KSRC (Deta-dependent kernel)** [Not included in this package]
         - Y. Wu, Y. Jia, P. Li, J. Zhang, and J. Yuan, "[Manifold kernel sparse representation of symmetric positive definite matrices and its applications](http://ieeexplore.ieee.org/document/7145428/)," IEEE Transactions on Image Processing, vol.24, no.11, 2015.
-
+    - **R-DR** (Riemannian dimensinality reduction)
+        - M. Harandi, M. Salzmann and R. Hartley, "[From manifold to manifold: geometry-aware dimensionality reduction for SPD matrices](https://link.springer.com/chapter/10.1007/978-3-319-10605-2_2)," European Conference on Computer Vision (ECCV), 2014.
 <br />
 
 Folders and files
@@ -208,6 +211,8 @@ Third party tools, libraries, and packages.
     - [LC-KSVD](https://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html).
     - [FDDL](http://www4.comp.polyu.edu.hk/~cslzhang/code/FDDL.zip).
     - [RSR](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0ZVpGRDNLX3NCbXc).
+    - [R-DR](https://drive.google.com/uc?export=download&id=0B9_PW9TCpxT0RkY2NXdURnhYa00).
+    - [R-SRC and R-DL-SC](http://users.cecs.anu.edu.au/~cherian/code/rspdl.tar.gz).
     - [Learning Discriminative Stein Kernel for SPD Matrices and Its Applications](https://github.com/seuzjj/DSK/archive/master.zip).
     - [SDR-SLR](http://www3.ntu.edu.sg/home/EXDJiang/CodesPAMI2015.zip).
     - [R-KSRC (Log-Euclidean kernel)](http://www4.comp.polyu.edu.hk/~cslzhang/LogEKernel_Project/ICCV_LogEKernel_Code.zip).
@@ -228,6 +233,8 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
+* Version 1.0.6 (Aug. 03, 2017)
+    - Add R-DR, R-SRC, others. 
 * Version 1.0.5 (July 27, 2017)
     - Add JDDRDL and others. 
 * Version 1.0.4 (July 11, 2017)

@@ -75,7 +75,7 @@ lambda = 0.001;
 options.verbose = true;
 options.eigenface = eigenface_flag;
 options.eigenface_dim = max_class_num*max_samples;
-accuracy_crc = crc(TrainSet, TestSet, test_num, class_num, lambda, options);
+accuracy_crc = crc(TrainSet, TestSet, train_num, test_num, class_num, lambda, options);
 fprintf('# CRC: Accuracy = %5.5f\n', accuracy_crc);
 
 
