@@ -65,7 +65,7 @@ fprintf('# R-KSRC (LogEuc): Accuracy = %5.5f\n', Accuracy_rksr_logeuc);
  
 newDim = floor(size(TrainSet.X, 1)/2);
 
-%% NN-AIRM-DR (NN on dimensionaliy reduced (AIRM-based) SDP)
+%% NN-AIRM-DR (NN on dimensionaliy reduced (AIRM-based) SPD)
 clear options;
 options.verbose = 2;
 options.maxiter = 5;
@@ -75,7 +75,7 @@ Accuracy_nn_airm_dr   = spd_knn_classifier(DR_TrainSet, DR_TestSet, metric);
 fprintf('# NN on low-dimensional SPD (AIRM): Accuracy = %5.5f\n', Accuracy_nn_airm_dr);
 
 
-%% R-SRC-AIRM-DR (R-SRC on dimensionaliy reduced (AIRM-based) SDP)
+%% R-SRC-AIRM-DR (R-SRC on dimensionaliy reduced (AIRM-based) SPD)
 clear options;
 options.verbose = verbose;
 options.lambda = lambda;
@@ -86,7 +86,7 @@ Accuracy_rsrc_airm_dr = rsrc_classifier(DR_TrainSet, DR_TestSet, 'RSRC', options
 fprintf('# R-SRC on low-dimensional SPD (AIRM): Accuracy = %5.5f\n', Accuracy_rsrc_airm_dr.residual);
 
 
-%% R-KSRC-AIRM-DR (R-KSRC on dimensionaliy reduced (S divergence-based) SDP)
+%% R-KSRC-AIRM-DR (R-KSRC on dimensionaliy reduced (S divergence-based) SPD)
 clear options;
 options.mode = 'src'; % 'src', 'ip_linear', 'ip_max'
 options.original_alpha = true;
@@ -99,7 +99,7 @@ Accuracy_rksrc_airm_dr = rksr_classifier(DR_TrainSet, DR_TestSet, options);
 fprintf('# R-KSRC on low-dimensional SPD (AIRM): Accuracy = %5.5f\n', Accuracy_rksrc_airm_dr);
 
 
-%% NN-S-DR (NN on dimensionaliy reduced (S divergence-based) SDP)
+%% NN-S-DR (NN on dimensionaliy reduced (S divergence-based) SPD)
 clear options;
 options.verbose = 2;
 options.maxiter = 5;
@@ -109,7 +109,7 @@ Accuracy_nn_stein_dr   = spd_knn_classifier(DR_TrainSet, DR_TestSet, metric);
 fprintf('# NN on low-dimensional SPD (Stein): Accuracy = %5.5f\n', Accuracy_nn_stein_dr);
 
 
-%% R-SRC-S-DR (R-SRC on dimensionaliy reduced (S divergence-based) SDP)
+%% R-SRC-S-DR (R-SRC on dimensionaliy reduced (S divergence-based) SPD)
 clear options;
 options.verbose = verbose;
 options.lambda = lambda;
@@ -120,7 +120,7 @@ Accuracy_rsrc_stein_dr = rsrc_classifier(DR_TrainSet, DR_TestSet, 'RSRC', option
 fprintf('# R-SRC on low-dimensional SPD (Stein): Accuracy = %5.5f\n', Accuracy_rsrc_stein_dr.residual);
 
 
-%% R-KSRC-S-DR (R-KSRC on dimensionaliy reduced (S divergence-based) SDP)
+%% R-KSRC-S-DR (R-KSRC on dimensionaliy reduced (S divergence-based) SPD)
 clear options;
 options.mode = 'src'; % 'src', 'ip_linear', 'ip_max'
 options.original_alpha = true;
