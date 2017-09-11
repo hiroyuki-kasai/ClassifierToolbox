@@ -4,9 +4,9 @@
 
 Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
-Last page update: Aug. 03, 2017
+Last page update: Seo. 11, 2017
 
-Latest library version: 1.0.6 (see Release notes for more info)
+Latest library version: 1.0.7 (see Release notes for more info)
 
 Introduction
 ----------
@@ -144,17 +144,20 @@ demo;
 The "**demo.m**" file contains below.
 ```Matlab
 %% load data
-load('./dataset/ORL_Face_img_cov.mat');
+load('./dataset/AR_Face_img_60x43.mat');
 
-%% perform RCM k-NN classifier with 
-% GRCM2 with eigenvalue-based distance
-grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet,'GRCM', '2', 'EV', 5);
-% RCM4 with eigenvalue-based distance
-rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
+%% set options
+options.verbose = true;
+
+%% LSR
+[accuracy_lsr, ~, ~] = lsr(TrainSet, TestSet, train_num, test_num, class_num, 0.001, options);
+
+%% LRC
+accuracy_lrc = lrc(TrainSet, TestSet, test_num, class_num, options);
 
 %% show recognition accuracy
-fprintf('# GRCM2 Accuracy = %5.2f\n', grcm_accuracy);
-fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
+fprintf('# LSR: Accuracy = %5.5f\n', accuracy_lsr);
+fprintf('# LRC: Accuracy = %5.5f\n', accuracy_lrc);
 ```
 
 <br />
@@ -163,30 +166,28 @@ Let take a closer look at the code above bit by bit. The procedure has only **3 
 
 **Step 1: Load data**
 
-First, we load datasets including train set and test set. This case uses a covariance dataset that is originally generated from [ORL face dataset](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html).
+First, we load datasets including train set and test set. 
 ```Matlab    
-load('./dataset/ORL_Face_img_cov.mat');
+load('./dataset/AR_Face_img_60x43.mat');
 ```
 
 **Step 2: Perform solver**
 
-Now, you can perform optimization solvers, i.e., RCM-based [kNN classifier](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm), calling `rcm_knn_classifier()` function with appropriate paramters. 
+Now, you can perform optimization solvers, i.e., LSR and LRC with appropriate paramters. 
 ```Matlab
-% GRCM2 with eigenvalue-based distance
-grcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'GRCM', '2', 'EV', 5);
+%% LSR
+[accuracy_lsr, ~, ~] = lsr(TrainSet, TestSet, train_num, test_num, class_num, 0.001, options);
 
-% RCM4 with eigenvalue-based distance
-rcm_accuracy = rcm_knn_classifier(TrainSet, TestSet, 'RCM', '4', 'EV', 5);
+%% LRC
+accuracy_lrc = lrc(TrainSet, TestSet, test_num, class_num, options);
 ```
-The first case performs the Gabor-wavelet-based region covariance matrix (CRCM) algorithm (type 4) with eigen-value based disctance followed by 5-NN classifier. 
-The second cases peforms the standard region covariance matrix (RCM) algorithm (type 2) with the same setting as before. They return the final accuracy.
 
 **Step 3: Show recognition accuracy**
 
 Finally, the final recognition accuracis are shown.
 ```Matlab
-fprintf('# GRCM2 Accuracy = %5.2f\n', grcm_accuracy);
-fprintf('# RCM4 Accuracy = %5.2f\n', rcm_accuracy);
+fprintf('# LSR: Accuracy = %5.5f\n', accuracy_lsr);
+fprintf('# LRC: Accuracy = %5.5f\n', accuracy_lrc);
 ```
 
 That's it!
@@ -231,6 +232,8 @@ If you have any problems or questions, please contact the author: [Hiroyuki Kasa
 
 Release Notes
 --------------
+* Version 1.0.7 (Sep. 11, 2017)
+    - Fix bugs. 
 * Version 1.0.6 (Aug. 03, 2017)
     - Add R-DR, R-SRC, others. 
 * Version 1.0.5 (July 27, 2017)
