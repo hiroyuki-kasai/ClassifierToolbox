@@ -16,8 +16,8 @@ if ~exist('dataset', 'dir')
 end
 
 % remote url, path, and filelist
-site_url = 'https://dl.dropboxusercontent.com/';
-site_path = 'u/869853/Github/ClassifierToolbox/dataset/';
+site_url = 'http://www.kasailab.com/';
+site_path = 'Public/Github/ClassifierToolbox/dataset/';
 filename_array = {'ORL_Face_img.mat', 'ORL_Face_img_cov.mat', 'AR_Face_img_27x20.mat', ...
                     'AR_Face_img_60x43.mat','Brodatz_texture_img_small_set.mat', ...
                     'USPS.mat', 'MNIST.mat', ...

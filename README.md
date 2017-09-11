@@ -4,8 +4,6 @@
 
 Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
 
-Collaborator: Kohei Yoshikawa
-
 Last page update: Aug. 03, 2017
 
 Latest library version: 1.0.6 (see Release notes for more info)
