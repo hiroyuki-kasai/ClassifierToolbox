@@ -146,7 +146,7 @@ The "**demo.m**" file contains below.
 %% load data
 load('./dataset/AR_Face_img_60x43.mat');
 
-%% set options
+%% set option
 options.verbose = true;
 
 %% LSR
