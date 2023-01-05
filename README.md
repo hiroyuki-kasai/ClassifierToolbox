@@ -2,7 +2,7 @@
 
 ----------
 
-Authors: [Hiroyuki Kasai](http://kasai.kasailab.com/)
+Authors: [Hiroyuki Kasai](http://kasai.comm.waseda.ac.jp/kasai/)
 
 Last page update: Seo. 11, 2017
 
@@ -226,7 +226,7 @@ Third party tools, libraries, and packages.
 
 Problems or questions
 ---------------------
-If you have any problems or questions, please contact the author: [Hiroyuki Kasai](http://kasai.kasailab.com/) (email: kasai **at** is **dot** uec **dot** ac **dot** jp)
+If you have any problems or questions, please contact the author: [Hiroyuki Kasai](http://kasai.comm.waseda.ac.jp/kasai/) (email: hiroyuki **dot** kasai **at** waseda **dot** jp)
 
 <br />
 
